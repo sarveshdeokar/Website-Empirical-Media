@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { useState } from "react";
-import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight, Calendar } from "lucide-react";
+import { BOOKING_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

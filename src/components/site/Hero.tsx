@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Calendar } from "lucide-react";
+import { BOOKING_URL } from "@/lib/booking";
 
 export default function Hero() {
   return (
@@ -44,12 +45,15 @@ export default function Hero() {
               Start a project
               <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform" />
             </Link>
-            <Link
-              to="/work"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-2xl border border-border px-6 py-4 font-medium hover:bg-muted transition"
             >
-              See our work
-            </Link>
+              <Calendar size={18} />
+              Book a meeting
+            </a>
           </div>
         </div>
 
