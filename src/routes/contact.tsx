@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { useState } from "react";
-import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight, Calendar } from "lucide-react";
+import { BOOKING_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -31,6 +32,16 @@ function ContactPage() {
               <br />
               <span className="text-gradient">something work.</span>
             </h1>
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-primary text-primary-foreground px-6 py-4 font-medium hover:shadow-[var(--shadow-glow)] transition"
+            >
+              <Calendar size={18} />
+              Book a 30-min intro call
+              <ArrowUpRight size={16} className="opacity-80" />
+            </a>
           </div>
         </section>
 

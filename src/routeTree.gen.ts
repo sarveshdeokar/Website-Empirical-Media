@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WorkRouteImport } from './routes/work'
+import { Route as TeamRouteImport } from './routes/team'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -19,6 +20,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const WorkRoute = WorkRouteImport.update({
   id: '/work',
   path: '/work',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamRoute = TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/team': typeof TeamRoute
   '/work': typeof WorkRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/team': typeof TeamRoute
   '/work': typeof WorkRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/team': typeof TeamRoute
   '/work': typeof WorkRoute
 }
 export interface FileRouteTypes {
@@ -80,9 +89,17 @@ export interface FileRouteTypes {
     | '/contact'
     | '/services'
     | '/sitemap.xml'
+    | '/team'
     | '/work'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/services' | '/sitemap.xml' | '/work'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/services'
+    | '/sitemap.xml'
+    | '/team'
+    | '/work'
   id:
     | '__root__'
     | '/'
@@ -90,6 +107,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/services'
     | '/sitemap.xml'
+    | '/team'
     | '/work'
   fileRoutesById: FileRoutesById
 }
@@ -99,6 +117,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TeamRoute: typeof TeamRoute
   WorkRoute: typeof WorkRoute
 }
 
@@ -109,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/work'
       fullPath: '/work'
       preLoaderRoute: typeof WorkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team': {
+      id: '/team'
+      path: '/team'
+      fullPath: '/team'
+      preLoaderRoute: typeof TeamRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -155,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TeamRoute: TeamRoute,
   WorkRoute: WorkRoute,
 }
 export const routeTree = rootRouteImport
