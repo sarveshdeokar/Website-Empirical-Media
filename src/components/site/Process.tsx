@@ -1,8 +1,8 @@
 const steps = [
-  { k: "01", t: "Listen", d: "We start with your numbers, your team and the friction you actually feel." },
-  { k: "02", t: "Model", d: "We model the opportunity — audience, channel, economics — before a single rupee moves." },
-  { k: "03", t: "Make", d: "Strategy becomes craft: media plans, creative, product, marketplace systems." },
-  { k: "04", t: "Measure", d: "Every quarter we audit ourselves against the outcomes we promised." },
+  { k: "01", t: "Top Funnel — Linear TV", d: "BARC-led TV planning and audit. Optimise GRPs, frequency and cost-per-reach across languages and states. Where brand stories begin." },
+  { k: "02", t: "Mid Funnel — Connected TV", d: "Cross-platform modeling that fuses BARC and CTV datasets — removing duplication, surfacing incremental, digital-first audiences." },
+  { k: "03", t: "Lower Funnel — Digital & Commerce", d: "Mapping exposure to Google, Meta, YouTube and marketplaces (Amazon, Flipkart, Blinkit, Tata 1mg). From clicks to carts to customers." },
+  { k: "04", t: "Loop — Audit & Attribution", d: "Geo-mapping, MMM and retail correlation close the loop between media spend and measurable shelf movement." },
 ];
 
 export default function Process() {
@@ -11,10 +11,14 @@ export default function Process() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-12">
           <div>
-            <span className="font-mono text-xs uppercase tracking-widest text-primary">// Process</span>
+            <span className="font-mono text-xs uppercase tracking-widest text-primary">// The Full-Funnel Framework</span>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tighter">
-              A four-beat loop, run on repeat.
+              One funnel. <span className="text-gradient">Every screen.</span>
             </h2>
+            <p className="mt-6 text-muted-foreground max-w-md">
+              We unite broadcast scale with digital precision — so every impression
+              created upstream can be measured against revenue downstream.
+            </p>
           </div>
           <div className="space-y-px bg-border rounded-2xl overflow-hidden">
             {steps.map((s) => (

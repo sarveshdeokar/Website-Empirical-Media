@@ -14,12 +14,13 @@ export default function CTA() {
           <div className="relative max-w-3xl">
             <span className="font-mono text-xs uppercase tracking-widest text-primary">// Let's build</span>
             <h2 className="mt-3 font-display text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95]">
-              Have a brand to
+              Turn campaigns into
               <br />
-              <span className="text-gradient">unleash?</span>
+              <span className="text-gradient">growth stories.</span>
             </h2>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              Tell us what you're building. We'll come back within a working day with a perspective worth your time.
+              Tell us what you're building. We'll come back within a working day with a
+              data-backed perspective worth your time.
             </p>
             <Link
               to="/contact"

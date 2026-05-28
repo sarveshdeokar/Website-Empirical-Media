@@ -8,12 +8,10 @@ export default function Footer() {
       <div className="relative mx-auto max-w-7xl px-6 py-16">
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2">
-              <img src={logo} alt="" className="h-9 w-auto" />
-              <span className="font-display text-lg font-semibold">Empirical<span className="text-primary">.</span></span>
-            </div>
+            <img src={logo} alt="Empirical Media" className="h-14 w-auto" />
             <p className="mt-4 text-sm text-muted-foreground max-w-sm">
-              An ideal companion for your advertising, digital marketing and brand growth needs — built across every media platform that matters.
+              India's marketing intelligence consultancy — uniting Linear TV, Connected TV,
+              Digital and Commerce into one measurable performance framework.
             </p>
           </div>
           <div>
