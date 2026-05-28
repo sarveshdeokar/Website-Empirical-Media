@@ -73,30 +73,17 @@
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes orb-a {
-  0%, 100% { transform: translate(0,0) scale(1); }
-  50%      { transform: translate(120px, 80px) scale(1.15); }
+@keyframes petal-fall {
+  0%   { transform: translate3d(0, -10vh, 0) rotate(0deg); }
+  100% { transform: translate3d(var(--sway, 8vw), 110vh, 0) rotate(var(--rot, 360deg)); }
 }
-@keyframes orb-b {
-  0%, 100% { transform: translate(0,0) scale(1); }
-  50%      { transform: translate(-100px, 60px) scale(1.1); }
-}
-@keyframes orb-c {
-  0%, 100% { transform: translate(0,0) scale(1); }
-  50%      { transform: translate(60px, -80px) scale(1.2); }
-}
-@keyframes scan-a {
-  0%   { transform: translateX(-30%); opacity: 0; }
-  20%  { opacity: 1; }
-  80%  { opacity: 1; }
-  100% { transform: translateX(30%); opacity: 0; }
+@keyframes petal-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
-.animate-orb-a { animation: orb-a 18s ease-in-out infinite; }
-.animate-orb-b { animation: orb-b 22s ease-in-out infinite; }
-.animate-orb-c { animation: orb-c 26s ease-in-out infinite; }
-.animate-scan-a { animation: scan-a 9s ease-in-out infinite; }
-.animate-scan-b { animation: scan-a 13s ease-in-out infinite reverse; }
+.animate-petal-fall { animation: petal-fall linear infinite; will-change: transform; }
+.animate-petal-spin { animation: petal-spin 6s ease-in-out infinite; }
 
 /* LIGHT THEME (default — white-based, logo-friendly) */
 :root {
