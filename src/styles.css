@@ -73,6 +73,30 @@
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+@keyframes orb-a {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50%      { transform: translate(120px, 80px) scale(1.15); }
+}
+@keyframes orb-b {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50%      { transform: translate(-100px, 60px) scale(1.1); }
+}
+@keyframes orb-c {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50%      { transform: translate(60px, -80px) scale(1.2); }
+}
+@keyframes scan-a {
+  0%   { transform: translateX(-30%); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateX(30%); opacity: 0; }
+}
+
+.animate-orb-a { animation: orb-a 18s ease-in-out infinite; }
+.animate-orb-b { animation: orb-b 22s ease-in-out infinite; }
+.animate-orb-c { animation: orb-c 26s ease-in-out infinite; }
+.animate-scan-a { animation: scan-a 9s ease-in-out infinite; }
+.animate-scan-b { animation: scan-a 13s ease-in-out infinite reverse; }
 
 /* LIGHT THEME (default — white-based, logo-friendly) */
 :root {

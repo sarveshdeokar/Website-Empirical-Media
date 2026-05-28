@@ -95,10 +95,13 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+import AnimatedBackground from "@/components/site/AnimatedBackground";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
+      <AnimatedBackground />
       <Outlet />
     </QueryClientProvider>
   );
