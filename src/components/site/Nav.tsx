@@ -3,6 +3,7 @@ import { useState } from "react";
 import logo from "@/assets/logo.png";
 import { Menu, X, Calendar } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { to: "/", label: "Home" },
@@ -18,12 +19,9 @@ export default function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto max-w-7xl px-6 pt-5">
-        <nav className="glass rounded-2xl flex items-center justify-between px-4 py-3">
+        <nav className="glass rounded-2xl flex items-center justify-between px-4 py-2.5">
           <Link to="/" className="flex items-center gap-2.5">
-            <img src={logo} alt="Empirical Media" className="h-8 w-auto" />
-            <span className="font-display font-semibold tracking-tight hidden sm:block">
-              Empirical<span className="text-primary">.</span>
-            </span>
+            <img src={logo} alt="Empirical Media" className="h-12 w-auto" />
           </Link>
           <ul className="hidden lg:flex items-center gap-1 font-mono text-xs uppercase tracking-widest">
             {links.map((l) => (
@@ -39,18 +37,21 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-          <a
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:shadow-[var(--shadow-glow)] transition"
-          >
-            <Calendar size={15} />
-            Book a meeting
-          </a>
-          <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground">
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:shadow-[var(--shadow-glow)] transition"
+            >
+              <Calendar size={15} />
+              Book a meeting
+            </a>
+            <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground">
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </nav>
         {open && (
           <div className="glass rounded-2xl mt-2 p-4 lg:hidden space-y-1">

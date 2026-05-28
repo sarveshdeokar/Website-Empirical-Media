@@ -6,6 +6,7 @@ import ServicesGrid from "@/components/site/ServicesGrid";
 import Marquee from "@/components/site/Marquee";
 import Process from "@/components/site/Process";
 import CTA from "@/components/site/CTA";
+import LogoIntro from "@/components/site/LogoIntro";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -14,6 +15,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen">
+      <LogoIntro />
       <Nav />
       <main>
         <Hero />

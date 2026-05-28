@@ -10,9 +10,9 @@ export default function ServicesGrid() {
           <div className="max-w-2xl">
             <span className="font-mono text-xs uppercase tracking-widest text-primary">// What we do</span>
             <h2 className="mt-3 font-display text-4xl md:text-6xl font-bold tracking-tighter">
-              Eight verticals.
+              Independent.
               <br />
-              One operating system.
+              Insight-driven. <span className="text-gradient">Integrated.</span>
             </h2>
           </div>
           <Link to="/services" className="font-mono text-sm hover:text-primary inline-flex items-center gap-2">
