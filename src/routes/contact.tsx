@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { useState } from "react";
-import { Mail, Phone, MapPin, ArrowUpRight, Calendar } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight, Calendar, Linkedin, Download, Lock } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/contact")({
@@ -16,6 +16,9 @@ export const Route = createFileRoute("/contact")({
   }),
   component: ContactPage,
 });
+
+const PORTFOLIO_PASSWORD = "123456";
+const PORTFOLIO_URL = "/empirical-media-portfolio.pdf";
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -32,16 +35,27 @@ function ContactPage() {
               <br />
               <span className="text-gradient">something work.</span>
             </h1>
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-primary text-primary-foreground px-6 py-4 font-medium hover:shadow-[var(--shadow-glow)] transition"
-            >
-              <Calendar size={18} />
-              Book a 30-min intro call
-              <ArrowUpRight size={16} className="opacity-80" />
-            </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-2xl bg-primary text-primary-foreground px-6 py-4 font-medium hover:shadow-[var(--shadow-glow)] transition"
+              >
+                <Calendar size={18} />
+                Book a 30-min intro call
+                <ArrowUpRight size={16} className="opacity-80" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/empiricalmediabangalore/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-4 font-medium hover:border-primary transition"
+              >
+                <Linkedin size={18} />
+                Connect on LinkedIn
+              </a>
+            </div>
           </div>
         </section>
 
@@ -78,13 +92,90 @@ function ContactPage() {
             <aside className="space-y-px bg-border rounded-3xl overflow-hidden">
               <ContactCard icon={<Mail size={18} />} label="New business" value="sales@empiricalmedia.in" href="mailto:sales@empiricalmedia.in" />
               <ContactCard icon={<Phone size={18} />} label="Say hello" value="+91 63667 99955" href="tel:+916366799955" />
-              <ContactCard icon={<MapPin size={18} />} label="Studio" value="#367/22, 2nd Floor, 8th Main, 11th Cross, Jayanagar 2nd Block, Bengaluru" />
+              <ContactCard icon={<Linkedin size={18} />} label="LinkedIn" value="empiricalmediabangalore" href="https://www.linkedin.com/company/empiricalmediabangalore/" />
+              <ContactCard icon={<MapPin size={18} />} label="Studio" value="#367, 2nd Floor, 8th Main Road, 11th Cross, 2nd Block, Jayanagar, Bengaluru, Karnataka 560011" />
             </aside>
           </div>
         </section>
+
+        <PortfolioDownload />
       </main>
       <Footer />
     </div>
+  );
+}
+
+function PortfolioDownload() {
+  const [pw, setPw] = useState("");
+  const [unlocked, setUnlocked] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (pw.trim() === PORTFOLIO_PASSWORD) {
+      setUnlocked(true);
+      setError("");
+      // trigger download
+      const a = document.createElement("a");
+      a.href = PORTFOLIO_URL;
+      a.download = "Empirical-Media-Portfolio.pdf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    } else {
+      setError("Incorrect password. Please try again or request access.");
+    }
+  };
+
+  return (
+    <section className="py-20">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-8 md:p-14">
+          <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full blur-3xl opacity-30"
+               style={{ background: "radial-gradient(circle, var(--primary), transparent 70%)" }} />
+          <div className="relative grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
+            <div>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">// Portfolio</span>
+              <h2 className="mt-3 font-display text-3xl md:text-5xl font-bold tracking-tighter">
+                Download our work deck.
+              </h2>
+              <p className="mt-4 text-muted-foreground max-w-lg">
+                A protected case-study deck across TV, digital, marketplaces and brand.
+                Enter the password shared with you to download. Don't have one?{" "}
+                <a href="mailto:sales@empiricalmedia.in" className="text-primary hover:underline">Request access</a>.
+              </p>
+            </div>
+            <form onSubmit={handleSubmit} className="glass rounded-2xl p-6 space-y-4">
+              <label className="font-mono text-xs uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                <Lock size={14} /> Access password
+              </label>
+              <input
+                type="password"
+                value={pw}
+                onChange={(e) => setPw(e.target.value)}
+                placeholder="Enter password"
+                maxLength={64}
+                className="w-full rounded-xl bg-background border border-border p-4 outline-none focus:border-primary transition"
+              />
+              {error && <p className="text-sm text-destructive">{error}</p>}
+              {unlocked && (
+                <p className="text-sm text-primary">
+                  Unlocked — your download has started.{" "}
+                  <a href={PORTFOLIO_URL} download className="underline">Click here if it didn't.</a>
+                </p>
+              )}
+              <button
+                type="submit"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground px-5 py-3.5 font-medium hover:shadow-[var(--shadow-glow)] transition"
+              >
+                <Download size={18} />
+                {unlocked ? "Download again" : "Unlock & download"}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -112,5 +203,5 @@ function ContactCard({ icon, label, value, href }: { icon: React.ReactNode; labe
       </div>
     </div>
   );
-  return href ? <a href={href}>{Body}</a> : Body;
+  return href ? <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">{Body}</a> : Body;
 }
