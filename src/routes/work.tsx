@@ -17,12 +17,9 @@ export const Route = createFileRoute("/work")({
 });
 
 const cases = [
-  { tag: "Brand · TV · Digital", title: "A heritage FMCG brand reframed for Gen-Z", metric: "+42% aided recall in 6 months" },
-  { tag: "D2C · Marketplace", title: "Scaling a wellness D2C across Amazon & quick-commerce", metric: "3.1× marketplace revenue YoY" },
-  { tag: "Product · Brand", title: "Launching a B2B SaaS into a crowded category", metric: "MQL CAC down 38%" },
-  { tag: "Media · Performance", title: "Re-engineering paid social for a leading apparel brand", metric: "ROAS lifted 2.4×" },
-  { tag: "Identity · Web", title: "A 30-year-old brand, rebuilt for digital-first audiences", metric: "Bounce rate cut by half" },
-  { tag: "Creative · TVC", title: "A regional TVC that played national", metric: "180M+ impressions" },
+  { tag: "CTV · Linear TV", title: "A South Indian personal care brand achieved 22% incremental reach by integrating CTV audiences beyond linear TV viewers.", metric: "+22% incremental reach" },
+  { tag: "Meta · Google · Marketplace", title: "A wellness company improved ROAS by 4x through full-funnel tracking between Meta, Google, and marketplace data.", metric: "4× ROAS improvement" },
+  { tag: "Regional TV · GRPs", title: "A retail group optimized regional TV GRPs by 18%, reducing media cost per reach while expanding brand recall.", metric: "18% GRP optimization" },
 ];
 
 export default function WorkPage() {
@@ -34,10 +31,10 @@ export default function WorkPage() {
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="relative mx-auto max-w-7xl px-6">
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">// Selected work</span>
-            <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
-              Outcomes,
+          <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
+              Real Results.
               <br />
-              <span className="text-gradient">on the record.</span>
+              <span className="text-gradient">Real Intelligence.</span>
             </h1>
           </div>
         </section>
