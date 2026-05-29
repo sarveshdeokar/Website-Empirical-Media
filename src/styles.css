@@ -74,17 +74,19 @@
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes petal-fall {
-  0%   { transform: translate3d(0, -10vh, 0) rotate(0deg); }
-  100% { transform: translate3d(var(--sway, 8vw), 110vh, 0) rotate(var(--rot, 360deg)); }
+@keyframes neon-float {
+  0%   { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50%  { transform: translate3d(var(--drift-x, 0), -3vh, 0) rotate(calc(var(--rot, 360deg) / 2)); }
+  100% { transform: translate3d(0, 0, 0) rotate(var(--rot, 360deg)); }
 }
-@keyframes petal-spin {
+@keyframes neon-spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
 
-.animate-petal-fall { animation: petal-fall linear infinite; will-change: transform; }
-.animate-petal-spin { animation: petal-spin 6s ease-in-out infinite; }
+.animate-neon-float { animation: neon-float ease-in-out infinite; will-change: transform; }
+.animate-neon-spin  { animation: neon-spin 22s linear infinite; }
+
 
 /* LIGHT THEME (default — white-based, logo-friendly) */
 :root {

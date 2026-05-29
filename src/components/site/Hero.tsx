@@ -35,17 +35,18 @@ export default function Hero() {
         </div>
 
         <h1 className="font-display text-5xl sm:text-7xl lg:text-[8.5rem] font-bold leading-[0.92] tracking-tighter">
-          <span className="text-orange-300">360 Digital</span>
+          <span className="text-orange-300">From Television</span>
           <br />
-          Media to Sales
+          to Total Marketing<br />Intelligence
         </h1>
 
         <div className="mt-10 grid md:grid-cols-2 gap-10 items-end">
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
-            Empirical Media is India's full-funnel marketing intelligence partner —
-            uniting Linear TV, Connected TV, Digital and Commerce into one measurable
-            performance framework. Independent. Insight-driven. Integrated.
+            A decade of trust, transparency and measurable impact in India's TV ecosystem —
+            now a Full-Funnel Marketing Intelligence Partner uniting Linear TV, CTV, Digital
+            and Commerce. Empirical makes every impression count.
           </p>
+
           <div className="flex flex-wrap gap-3 md:justify-end">
             <Link
               to="/contact"
