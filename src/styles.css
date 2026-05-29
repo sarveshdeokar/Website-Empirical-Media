@@ -178,8 +178,17 @@
     font-weight: 700;
   }
   ::selection {
-    background: var(--ink);
-    color: var(--paper);
+    background: var(--brand);
+    color: #fff;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      :where(section h1, section h2, section h3, section article, section .pop-card, .reveal) {
+        animation: reveal-up cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 28%;
+      }
+    }
   }
 }
 
@@ -202,6 +211,33 @@
   }
   .pop-card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 18px 50px -24px color-mix(in oklab, var(--foreground) 35%, transparent);
+  }
+  .text-gradient {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .underline-grow {
+    position: relative;
+  }
+  .underline-grow::after {
+    content: "";
+    position: absolute; left: 0; bottom: -3px;
+    height: 2px; width: 100%;
+    background: var(--brand);
+    transform: scaleX(0); transform-origin: right;
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .underline-grow:hover::after { transform: scaleX(1); transform-origin: left; }
+  .lift {
+    transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 350ms ease;
+  }
+  .lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px -20px color-mix(in oklab, var(--foreground) 30%, transparent);
   }
   .grain::before {
     content: "";
