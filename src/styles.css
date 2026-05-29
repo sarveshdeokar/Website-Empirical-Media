@@ -44,6 +44,8 @@
   --animate-marquee: marquee 50s linear infinite;
   --animate-fade-up: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   --animate-logo-reveal: logo-reveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.4s linear infinite;
 }
 
 @keyframes marquee {
@@ -53,6 +55,22 @@
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes reveal-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 @keyframes logo-reveal {
   0%   { opacity: 0; transform: scale(0.85); filter: blur(12px); }
@@ -80,21 +98,29 @@
   --popover: var(--paper);
   --popover-foreground: var(--ink);
 
-  --primary: var(--ink);
-  --primary-foreground: var(--paper);
+  /* Bold brand accent — electric vermilion */
+  --brand: #ff4d2e;
+  --brand-2: #ff7a1a;
+  --brand-soft: #ffe4d6;
+
+  --primary: var(--brand);
+  --primary-foreground: #ffffff;
   --secondary: var(--surface);
   --secondary-foreground: var(--ink);
   --muted: #ece8df;
-  --muted-foreground: #5a5a55;
-  --accent: var(--ink);
-  --accent-foreground: var(--paper);
+  --muted-foreground: #4a4a45;
+  --accent: var(--brand);
+  --accent-foreground: #ffffff;
 
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: var(--paper);
 
-  --border: rgba(13, 13, 13, 0.08);
-  --input: rgba(13, 13, 13, 0.12);
-  --ring: var(--ink);
+  --border: rgba(13, 13, 13, 0.10);
+  --input: rgba(13, 13, 13, 0.14);
+  --ring: var(--brand);
+
+  --shadow-glow: 0 12px 40px -10px color-mix(in oklab, var(--brand) 55%, transparent);
+  --gradient-brand: linear-gradient(135deg, var(--brand), var(--brand-2));
 }
 
 /* =====================================================
@@ -115,18 +141,25 @@
   --popover: var(--paper);
   --popover-foreground: var(--ink);
 
-  --primary: var(--ink);
-  --primary-foreground: var(--paper);
+  --brand: #ff6a44;
+  --brand-2: #ffa340;
+  --brand-soft: #3a1a12;
+
+  --primary: var(--brand);
+  --primary-foreground: #0d0d0d;
   --secondary: var(--surface);
   --secondary-foreground: var(--ink);
   --muted: #1a1a1a;
-  --muted-foreground: #9a958c;
-  --accent: var(--ink);
-  --accent-foreground: var(--paper);
+  --muted-foreground: #b5b0a6;
+  --accent: var(--brand);
+  --accent-foreground: #0d0d0d;
 
-  --border: rgba(245, 243, 238, 0.10);
-  --input: rgba(245, 243, 238, 0.14);
-  --ring: var(--ink);
+  --border: rgba(245, 243, 238, 0.12);
+  --input: rgba(245, 243, 238, 0.16);
+  --ring: var(--brand);
+
+  --shadow-glow: 0 12px 40px -10px color-mix(in oklab, var(--brand) 60%, transparent);
+  --gradient-brand: linear-gradient(135deg, var(--brand), var(--brand-2));
 }
 
 @layer base {
