@@ -43,7 +43,7 @@ export default function LogoIntro() {
           className="font-mono text-xs uppercase tracking-[0.4em] text-muted-foreground opacity-0 animate-fade-up"
           style={{ animationDelay: "0.6s" }}
         >
-          From TV to Transaction
+          <span className="text-orange-300">360 Digital</span> Media to Sales
         </div>
       </div>
     </div>

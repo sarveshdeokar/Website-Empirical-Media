@@ -35,9 +35,9 @@ export default function Hero() {
         </div>
 
         <h1 className="font-display text-5xl sm:text-7xl lg:text-[8.5rem] font-bold leading-[0.92] tracking-tighter">
-          From TV
+          <span className="text-orange-300">360 Digital</span>
           <br />
-          <span className="text-gradient">to Transaction.</span>
+          Media to Sales
         </h1>
 
         <div className="mt-10 grid md:grid-cols-2 gap-10 items-end">

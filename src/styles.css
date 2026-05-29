@@ -38,6 +38,7 @@
   --color-surface: var(--surface);
   --color-surface-elevated: var(--surface-elevated);
   --color-glow: var(--glow);
+  --color-orange-300: #fdba74;
 
   --shadow-glow: 0 0 60px -10px color-mix(in oklab, var(--primary) 50%, transparent);
   --shadow-glow-lg: 0 0 120px -20px color-mix(in oklab, var(--primary) 60%, transparent);
