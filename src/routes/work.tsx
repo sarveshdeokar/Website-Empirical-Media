@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import CTA from "@/components/site/CTA";
+
 import Marquee from "@/components/site/Marquee";
 
 export const Route = createFileRoute("/work")({
@@ -61,7 +61,7 @@ export default function WorkPage() {
         </section>
 
         <Marquee />
-        <CTA />
+        
       </main>
       <Footer />
     </div>
