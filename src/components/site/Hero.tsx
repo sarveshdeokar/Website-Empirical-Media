@@ -37,13 +37,6 @@ export default function Hero() {
 
 
           <div className="flex flex-wrap gap-3 md:justify-end">
-            <Link
-              to="/contact"
-              className="group inline-flex items-center gap-2 rounded-2xl bg-primary text-primary-foreground px-6 py-4 font-medium hover:shadow-[var(--shadow-glow-lg)] transition"
-            >
-              Start a project
-              <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform" />
-            </Link>
             <a
               href={BOOKING_URL}
               target="_blank"
