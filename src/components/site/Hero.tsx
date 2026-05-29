@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Calendar } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
-import logo from "@/assets/logo.png";
 
 export default function Hero() {
   return (
@@ -21,18 +20,6 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 w-full">
-        <img
-          src={logo}
-          alt="Empirical Media"
-          className="h-16 md:h-20 w-auto mb-8 animate-logo-reveal"
-        />
-
-        <div className="flex items-center gap-3 mb-6">
-          <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            Marketing Intelligence Consultancy · Bengaluru · Est. 2014
-          </span>
-        </div>
 
         <h1 className="font-display text-5xl sm:text-7xl lg:text-[8.5rem] font-bold leading-[0.92] tracking-tighter">
           <span className="text-orange-300">From Television</span>
