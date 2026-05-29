@@ -29,8 +29,7 @@ export default function Marquee() {
               target="_blank"
               rel="noopener noreferrer"
               title={c.name}
-              aria-label={c.name}
-              className="h-32 w-60 flex items-center justify-center shrink-0 rounded-2xl bg-surface border border-border px-8 hover:bg-foreground transition-colors duration-500 group"
+              className="relative h-32 w-60 flex items-center justify-center shrink-0 rounded-2xl bg-surface border border-border px-8 hover:bg-foreground transition-colors duration-500 group overflow-hidden"
             >
               <img
                 src={c.logo}
@@ -38,11 +37,11 @@ export default function Marquee() {
                 loading="lazy"
                 className="max-h-24 max-w-full object-contain opacity-80 group-hover:opacity-0 transition-opacity duration-500"
               />
-              <span
-                className="absolute font-display text-lg font-bold text-background opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              >
+              <span className="absolute inset-0 flex items-center justify-center font-display text-lg font-bold text-background opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-4 text-center">
                 {c.name}
               </span>
+            </a>
+
             </a>
           ))}
         </div>
