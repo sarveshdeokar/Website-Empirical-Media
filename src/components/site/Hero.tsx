@@ -21,6 +21,10 @@ export default function Hero() {
               className="md:col-span-7 text-lg md:text-2xl text-foreground/75 leading-relaxed max-w-2xl opacity-0 animate-fade-up"
               style={{ animationDelay: "0.15s" }}
             >
+              Over a decade of trust, transparency and measurable impact in India's TV ecosystem —
+              now evolving into a full-funnel marketing intelligence partner that unites Linear TV,
+              CTV, Digital and Commerce into one seamless performance framework.
+            </p>
               From Television to Total Marketing Intelligence — Empirical Media unites
               Linear TV, Connected TV, Digital and Commerce into one seamless performance framework.
             </p>
