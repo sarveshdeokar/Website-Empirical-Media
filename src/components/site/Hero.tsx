@@ -7,10 +7,13 @@ export default function Hero() {
     <section className="relative pt-40 pb-24 lg:pt-56 lg:pb-32">
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="max-w-5xl">
+          <p className="font-mono text-xs font-bold tracking-[0.2em] text-foreground/50 uppercase mb-6 animate-fade-up">
+            // From Television to Total Marketing Intelligence
+          </p>
           <h1 className="font-display text-6xl md:text-8xl lg:text-[9rem] font-bold tracking-tighter leading-[0.88] animate-fade-up">
-            360 Digital
+            Every impression,
             <br />
-            <span className="text-gradient">Media to Sales</span>
+            <span className="text-gradient">made to count.</span>
           </h1>
 
           <div className="mt-12 grid md:grid-cols-12 gap-8 items-end">
