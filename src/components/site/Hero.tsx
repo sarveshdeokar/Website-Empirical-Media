@@ -7,13 +7,10 @@ export default function Hero() {
     <section className="relative pt-40 pb-24 lg:pt-56 lg:pb-32">
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="max-w-5xl">
-          <p className="font-mono text-xs font-bold tracking-[0.2em] text-foreground/50 uppercase mb-6 animate-fade-up">
-            // From Television to Total Marketing Intelligence
-          </p>
           <h1 className="font-display text-6xl md:text-8xl lg:text-[9rem] font-bold tracking-tighter leading-[0.88] animate-fade-up">
-            Every impression,
+            360 Digital
             <br />
-            <span className="text-gradient">made to count.</span>
+            <span className="text-gradient">Media to Sales</span>
           </h1>
 
           <div className="mt-12 grid md:grid-cols-12 gap-8 items-end">
@@ -21,9 +18,8 @@ export default function Hero() {
               className="md:col-span-7 text-lg md:text-2xl text-foreground/75 leading-relaxed max-w-2xl opacity-0 animate-fade-up"
               style={{ animationDelay: "0.15s" }}
             >
-              Over a decade of trust, transparency and measurable impact in India's TV ecosystem —
-              now evolving into a full-funnel marketing intelligence partner that unites Linear TV,
-              CTV, Digital and Commerce into one seamless performance framework.
+              From Television to Total Marketing Intelligence — Empirical Media unites
+              Linear TV, Connected TV, Digital and Commerce into one seamless performance framework.
             </p>
             <div
               className="md:col-span-5 flex flex-wrap gap-3 md:justify-end opacity-0 animate-fade-up"
