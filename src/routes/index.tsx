@@ -5,7 +5,7 @@ import Hero from "@/components/site/Hero";
 import ServicesGrid from "@/components/site/ServicesGrid";
 import Marquee from "@/components/site/Marquee";
 import Process from "@/components/site/Process";
-import CTA from "@/components/site/CTA";
+
 import LogoIntro from "@/components/site/LogoIntro";
 
 export const Route = createFileRoute("/")({
@@ -22,7 +22,6 @@ function Index() {
         <Marquee />
         <ServicesGrid />
         <Process />
-        <CTA />
       </main>
       <Footer />
     </div>

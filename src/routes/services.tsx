@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import CTA from "@/components/site/CTA";
+
 import { services } from "@/lib/services";
 
 export const Route = createFileRoute("/services")({
@@ -65,7 +65,7 @@ function ServicesPage() {
           </div>
         </section>
 
-        <CTA />
+        
       </main>
       <Footer />
     </div>

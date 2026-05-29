@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import CTA from "@/components/site/CTA";
+
 import sandhya from "@/assets/team/sandhya.png";
 import gopala from "@/assets/team/gopala.png";
 import abhiram from "@/assets/team/abhiram.png";
@@ -112,7 +112,7 @@ function TeamPage() {
           </div>
         </section>
 
-        <CTA />
+        
       </main>
       <Footer />
     </div>
