@@ -30,8 +30,3 @@ function Index() {
     </div>
   );
 }
-
-      <Footer />
-    </div>
-  );
-}
