@@ -23,8 +23,8 @@ export const services: Service[] = [
     title: "Media Planning & Audit",
     tagline: "Every rupee accountable. Every reach measurable.",
     description:
-      "TV, OTT, print, OOH and digital buying with continuous audit loops to surface waste and reinvest in performance.",
-    capabilities: ["TV & OTT planning", "OOH & print", "Programmatic", "Cross-media audit"],
+      "Linear TV, CTV, print, OOH and digital buying with continuous BARC-led audit loops to surface waste and reinvest in performance.",
+    capabilities: ["TV & CTV planning", "OOH & print", "Programmatic", "Cross-media audit"],
   },
   {
     slug: "digital-marketing",
@@ -36,13 +36,13 @@ export const services: Service[] = [
     capabilities: ["Paid social", "Search & SEO", "Programmatic", "Lifecycle & CRM"],
   },
   {
-    slug: "marketplace-management",
+    slug: "full-stack-marketing",
     number: "04",
-    title: "Marketplace Management",
-    tagline: "Win the shelf — wherever your customer scrolls.",
+    title: "Full-Stack Marketing",
+    tagline: "One partner. The entire funnel.",
     description:
-      "End-to-end management across Amazon, Flipkart, Myntra and quick-commerce, from listing craft to ads and growth.",
-    capabilities: ["Listing & A+ content", "Marketplace ads", "Catalog ops", "Quick-commerce"],
+      "An integrated marketing engine across strategy, brand, media, content and commerce — operated as a single, accountable stack.",
+    capabilities: ["Integrated planning", "Brand & content", "Performance media", "Commerce ops"],
   },
   {
     slug: "product-design",
@@ -54,26 +54,8 @@ export const services: Service[] = [
     capabilities: ["UX & UI design", "Headless web", "Shopify & D2C", "Web apps"],
   },
   {
-    slug: "branding-as-a-service",
-    number: "06",
-    title: "Branding as a Service",
-    tagline: "Your brand team — on retainer.",
-    description:
-      "Identity systems, design ops and ongoing creative direction subscribed monthly. No more frozen brand books.",
-    capabilities: ["Identity systems", "Design ops", "Brand guidelines", "Retainer creative"],
-  },
-  {
-    slug: "data-insights",
-    number: "07",
-    title: "Data Visualization & Insights",
-    tagline: "Decisions, not dashboards.",
-    description:
-      "We model your media, sales and audience signals into decision-grade insight, packaged for the boardroom.",
-    capabilities: ["MMM & attribution", "Custom dashboards", "Audience modeling", "Brand tracking"],
-  },
-  {
     slug: "creative-services",
-    number: "08",
+    number: "06",
     title: "Creative Services",
     tagline: "Stories built for the medium.",
     description:
