@@ -31,10 +31,10 @@ export default function WorkPage() {
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="relative mx-auto max-w-7xl px-6">
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">// Selected work</span>
-            <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
-              Outcomes,
+          <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
+              Real Results.
               <br />
-              <span className="text-gradient">on the record.</span>
+              <span className="text-gradient">Real Intelligence.</span>
             </h1>
           </div>
         </section>
