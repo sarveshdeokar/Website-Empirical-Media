@@ -25,9 +25,6 @@ export default function Hero() {
               now evolving into a full-funnel marketing intelligence partner that unites Linear TV,
               CTV, Digital and Commerce into one seamless performance framework.
             </p>
-              From Television to Total Marketing Intelligence — Empirical Media unites
-              Linear TV, Connected TV, Digital and Commerce into one seamless performance framework.
-            </p>
             <div
               className="md:col-span-5 flex flex-wrap gap-3 md:justify-end opacity-0 animate-fade-up"
               style={{ animationDelay: "0.3s" }}
