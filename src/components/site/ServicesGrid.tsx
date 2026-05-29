@@ -17,7 +17,6 @@ const tiles: Tile[] = [
   { slug: "strategic-consulting", span: "md:col-span-8", showDescription: true },
   { slug: "media-planning", span: "md:col-span-4" },
   { slug: "digital-marketing", span: "md:col-span-4", showDescription: true },
-  { slug: "marketplace-management", span: "md:col-span-4" },
   { slug: "data-insights", span: "md:col-span-4", rowSpan: "md:row-span-2", variant: "ink", showDescription: true },
   { slug: "full-stack-marketing", span: "md:col-span-8", showDescription: true },
   { slug: "product-design", span: "md:col-span-6" },

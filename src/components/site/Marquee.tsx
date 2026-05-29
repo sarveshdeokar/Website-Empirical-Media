@@ -29,17 +29,14 @@ export default function Marquee() {
               target="_blank"
               rel="noopener noreferrer"
               title={c.name}
-              className="relative h-32 w-60 flex items-center justify-center shrink-0 rounded-2xl bg-surface border border-border px-8 hover:bg-foreground transition-colors duration-500 group overflow-hidden"
+              className="relative h-36 w-64 flex items-center justify-center shrink-0 rounded-2xl bg-white border border-black/10 px-8 shadow-[0_2px_12px_-4px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_-6px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all duration-500 group overflow-hidden"
             >
               <img
                 src={c.logo}
                 alt={c.name}
                 loading="lazy"
-                className="max-h-24 max-w-full object-contain opacity-80 group-hover:opacity-0 transition-opacity duration-500"
+                className="max-h-28 max-w-[80%] object-contain"
               />
-              <span className="absolute inset-0 flex items-center justify-center font-display text-lg font-bold text-background opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-4 text-center">
-                {c.name}
-              </span>
             </a>
 
           ))}

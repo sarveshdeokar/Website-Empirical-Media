@@ -44,15 +44,6 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "marketplace-management",
-    number: "04",
-    title: "Marketplace Management",
-    tagline: "Win the shelf — wherever your customer scrolls.",
-    description:
-      "End-to-end management across Amazon, Flipkart, Myntra and quick-commerce, from listing craft to ads and growth.",
-    capabilities: ["Listing & A+ content", "Marketplace ads", "Catalog ops", "Quick-commerce"],
-  },
-  {
     slug: "product-design",
     number: "05",
     title: "Product Design & Development",
