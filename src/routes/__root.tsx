@@ -96,12 +96,25 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 import AnimatedBackground from "@/components/site/AnimatedBackground";
+import { useEffect } from "react";
+import { useRouterState } from "@tanstack/react-router";
+
+function ScrollToTop() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
+  return null;
+}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
       <AnimatedBackground />
+      <ScrollToTop />
       <Outlet />
     </QueryClientProvider>
   );
