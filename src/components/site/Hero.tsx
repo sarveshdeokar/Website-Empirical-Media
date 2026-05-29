@@ -10,7 +10,7 @@ export default function Hero() {
           <h1 className="font-display text-6xl md:text-8xl lg:text-[9rem] font-bold tracking-tighter leading-[0.88] animate-fade-up">
             360 Digital
             <br />
-            <span className="text-foreground/40">Media to Sales</span>
+            <span className="text-gradient">Media to Sales</span>
           </h1>
 
           <div className="mt-12 grid md:grid-cols-12 gap-8 items-end">
@@ -27,8 +27,8 @@ export default function Hero() {
             >
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium transition-opacity hover:opacity-90"
-                style={{ backgroundColor: "var(--ink)", color: "var(--paper)" }}
+                className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]"
+                style={{ background: "var(--gradient-brand)" }}
               >
                 Start a project
                 <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform" />

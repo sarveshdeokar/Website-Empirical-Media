@@ -29,8 +29,8 @@ export default function CTA() {
             </p>
             <Link
               to="/contact"
-              className="group mt-12 inline-flex items-center gap-3 rounded-full px-10 py-5 font-bold uppercase tracking-[0.2em] text-sm transition-colors"
-              style={{ backgroundColor: "var(--paper)", color: "var(--ink)" }}
+              className="group mt-12 inline-flex items-center gap-3 rounded-full px-10 py-5 font-bold uppercase tracking-[0.2em] text-sm transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]"
+              style={{ background: "var(--gradient-brand)", color: "#fff" }}
             >
               Start a conversation
               <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform" />
