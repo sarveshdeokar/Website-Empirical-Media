@@ -19,7 +19,7 @@ export default function ServicesGrid() {
             All services <ArrowUpRight size={16} />
           </Link>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-3xl overflow-hidden">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-3xl overflow-hidden">
           {services.map((s) => (
             <Link
               key={s.slug}
