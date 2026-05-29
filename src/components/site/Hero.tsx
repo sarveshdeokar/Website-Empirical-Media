@@ -26,14 +26,15 @@ export default function Hero() {
               style={{ animationDelay: "0.3s" }}
             >
               <Link
+              <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-7 py-4 font-medium hover:bg-ink-2 transition-colors"
-                style={{ backgroundColor: "var(--ink)" }}
+                className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium transition-opacity hover:opacity-90"
+                style={{ backgroundColor: "var(--ink)", color: "var(--paper)" }}
               >
                 Start a project
                 <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform" />
               </Link>
-              <a
+
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
