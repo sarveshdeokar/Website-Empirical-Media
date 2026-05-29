@@ -42,10 +42,11 @@ export default function Hero() {
 
         <div className="mt-10 grid md:grid-cols-2 gap-10 items-end">
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
-            Empirical Media is India's full-funnel marketing intelligence partner —
-            uniting Linear TV, Connected TV, Digital and Commerce into one measurable
-            performance framework. Independent. Insight-driven. Integrated.
+            From Television to Total Marketing Intelligence — Empirical Media unites
+            Linear TV, Connected TV, Digital and Commerce into one seamless
+            performance framework. We make every impression count.
           </p>
+
           <div className="flex flex-wrap gap-3 md:justify-end">
             <Link
               to="/contact"
