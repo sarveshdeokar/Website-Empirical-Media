@@ -1,12 +1,13 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --font-display: "Space Grotesk", system-ui, sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -37,104 +38,95 @@
   --color-ring: var(--ring);
   --color-surface: var(--surface);
   --color-surface-elevated: var(--surface-elevated);
-  --color-glow: var(--glow);
-  --color-orange-300: #fdba74;
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
 
-  --shadow-glow: 0 0 60px -10px color-mix(in oklab, var(--primary) 50%, transparent);
-  --shadow-glow-lg: 0 0 120px -20px color-mix(in oklab, var(--primary) 60%, transparent);
-
-  --gradient-primary: linear-gradient(135deg, oklch(0.65 0.22 25), oklch(0.7 0.2 50));
-  --gradient-radial: radial-gradient(ellipse at top, oklch(0.65 0.22 25 / 0.18), transparent 60%);
-
-  --animate-marquee: marquee 40s linear infinite;
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-grid: grid-pan 20s linear infinite;
-  --animate-logo-reveal: logo-reveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-marquee: marquee 50s linear infinite;
   --animate-fade-up: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-logo-reveal: logo-reveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-@keyframes grid-pan {
-  from { background-position: 0 0; }
-  to { background-position: 60px 60px; }
-}
-@keyframes logo-reveal {
-  0%   { opacity: 0; transform: scale(0.7) translateY(40px); filter: blur(20px); }
-  60%  { opacity: 1; transform: scale(1.05) translateY(0); filter: blur(0); }
-  100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
-}
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes petal-fall {
-  0%   { transform: translate3d(0, -10vh, 0) rotate(0deg); }
-  100% { transform: translate3d(var(--sway, 8vw), 110vh, 0) rotate(var(--rot, 360deg)); }
-}
-@keyframes petal-spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+@keyframes logo-reveal {
+  0%   { opacity: 0; transform: scale(0.85); filter: blur(12px); }
+  100% { opacity: 1; transform: scale(1); filter: blur(0); }
 }
 
-.animate-petal-fall { animation: petal-fall linear infinite; will-change: transform; }
-.animate-petal-spin { animation: petal-spin 6s ease-in-out infinite; }
-
-/* LIGHT THEME (default — white-based, logo-friendly) */
+/* =====================================================
+   LIGHT — Paper & Ink (editorial minimalism)
+   ===================================================== */
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.99 0.003 80);
-  --foreground: oklch(0.18 0.02 260);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.02 260);
-  --primary: oklch(0.62 0.22 25);          /* warm coral/red — matches logo */
-  --primary-foreground: oklch(0.99 0.003 80);
-  --secondary: oklch(0.75 0.16 85);         /* warm yellow accent — matches logo dot */
-  --secondary-foreground: oklch(0.18 0.02 260);
-  --muted: oklch(0.96 0.005 80);
-  --muted-foreground: oklch(0.45 0.015 260);
-  --accent: oklch(0.75 0.16 85);
-  --accent-foreground: oklch(0.18 0.02 260);
-  --destructive: oklch(0.6 0.24 25);
-  --destructive-foreground: oklch(0.98 0.005 100);
-  --border: oklch(0 0 0 / 8%);
-  --input: oklch(0 0 0 / 10%);
-  --ring: oklch(0.62 0.22 25);
-  --surface: oklch(0.98 0.004 80);
-  --surface-elevated: oklch(0.96 0.005 80);
-  --glow: oklch(0.62 0.22 25);
+  --radius: 1rem;
+
+  /* Paper & Ink scale */
+  --paper: #f5f3ee;          /* base */
+  --paper-2: #ece8df;        /* deeper paper */
+  --surface: #e8e4dd;        /* card / tile */
+  --surface-elevated: #ddd8cd;
+  --ink: #0d0d0d;
+  --ink-2: #2d2d2d;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+
+  --primary: var(--ink);
+  --primary-foreground: var(--paper);
+  --secondary: var(--surface);
+  --secondary-foreground: var(--ink);
+  --muted: #ece8df;
+  --muted-foreground: #5a5a55;
+  --accent: var(--ink);
+  --accent-foreground: var(--paper);
+
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: var(--paper);
+
+  --border: rgba(13, 13, 13, 0.08);
+  --input: rgba(13, 13, 13, 0.12);
+  --ring: var(--ink);
 }
 
-/* DARK THEME */
+/* =====================================================
+   DARK — Ink on Paper inverse
+   ===================================================== */
 .dark {
-  --background: oklch(0.08 0.012 260);
-  --foreground: oklch(0.97 0.005 100);
-  --card: oklch(0.12 0.015 260);
-  --card-foreground: oklch(0.97 0.005 100);
-  --popover: oklch(0.12 0.015 260);
-  --popover-foreground: oklch(0.97 0.005 100);
-  --primary: oklch(0.78 0.18 50);
-  --primary-foreground: oklch(0.15 0.02 260);
-  --secondary: oklch(0.7 0.22 25);
-  --secondary-foreground: oklch(0.98 0.005 100);
-  --muted: oklch(0.18 0.018 260);
-  --muted-foreground: oklch(0.7 0.02 260);
-  --accent: oklch(0.7 0.22 25);
-  --accent-foreground: oklch(0.98 0.005 100);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 10%);
-  --ring: oklch(0.78 0.18 50);
-  --surface: oklch(0.11 0.015 260);
-  --surface-elevated: oklch(0.15 0.018 260);
-  --glow: oklch(0.78 0.18 50);
+  --paper: #0d0d0d;
+  --paper-2: #141414;
+  --surface: #1a1a1a;
+  --surface-elevated: #242424;
+  --ink: #f5f3ee;
+  --ink-2: #d9d5cd;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+
+  --primary: var(--ink);
+  --primary-foreground: var(--paper);
+  --secondary: var(--surface);
+  --secondary-foreground: var(--ink);
+  --muted: #1a1a1a;
+  --muted-foreground: #9a958c;
+  --accent: var(--ink);
+  --accent-foreground: var(--paper);
+
+  --border: rgba(245, 243, 238, 0.10);
+  --input: rgba(245, 243, 238, 0.14);
+  --ring: var(--ink);
 }
 
 @layer base {
@@ -144,37 +136,44 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+  ::selection {
+    background: var(--ink);
+    color: var(--paper);
   }
 }
 
 @layer utilities {
-  .grid-bg {
+  .paper-grid {
     background-image:
-      linear-gradient(to right, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px),
-      linear-gradient(to bottom, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px);
-    background-size: 60px 60px;
+      linear-gradient(to right, color-mix(in oklab, var(--foreground) 5%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--foreground) 5%, transparent) 1px, transparent 1px);
+    background-size: 80px 80px;
   }
-  .text-gradient {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  .ink-divider {
+    background: color-mix(in oklab, var(--foreground) 10%, transparent);
   }
-  .glass {
-    background: color-mix(in oklab, var(--card) 70%, transparent);
-    backdrop-filter: blur(16px);
+  .pop-card {
+    background: var(--surface);
     border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+                background-color 400ms ease, color 400ms ease;
   }
-  .noise::before {
+  .pop-card:hover {
+    transform: translateY(-4px);
+  }
+  .grain::before {
     content: "";
     position: absolute; inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-    opacity: 0.03; pointer-events: none; mix-blend-mode: overlay;
+    opacity: 0.04; pointer-events: none; mix-blend-mode: multiply;
   }
 }
