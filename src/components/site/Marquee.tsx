@@ -50,14 +50,16 @@ export default function Marquee() {
   const loop = [...clients, ...clients];
   return (
     <section className="relative py-20 overflow-hidden border-y border-border">
-      <div className="mx-auto max-w-7xl px-6 mb-10 flex items-baseline justify-between">
-        <h2 className="font-display text-2xl md:text-3xl">
-          Trusted across <span className="text-gradient">FMCG, Retail & Wellness</span>
+      <div className="mx-auto max-w-7xl px-6 mb-10">
+        <span className="font-mono text-xs uppercase tracking-widest text-primary">// Our Clients</span>
+        <h2 className="mt-3 font-display text-3xl md:text-5xl font-bold tracking-tighter">
+          Building Trust <span className="text-gradient">Across Categories</span>
         </h2>
-        <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground hidden md:block">
-          // {clients.length}+ partners
-        </span>
+        <p className="mt-4 max-w-3xl text-muted-foreground">
+          Empirical Media partners with leading brands across FMCG, Personal Care, Retail, E-Commerce, Hospitality, and Wellness. From emerging startups to established national advertisers, our clients value one thing above all — transparency and measurable results. We serve clients in Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, and Kerala — bringing regional expertise and local market insights that drive superior campaign outcomes.
+        </p>
       </div>
+
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />

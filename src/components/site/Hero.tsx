@@ -28,11 +28,13 @@ export default function Hero() {
         </h1>
 
         <div className="mt-10 grid md:grid-cols-2 gap-10 items-end">
-          <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
-            A decade of trust, transparency and measurable impact in India's TV ecosystem —
-            now a Full-Funnel Marketing Intelligence Partner uniting Linear TV, CTV, Digital
-            and Commerce. Empirical makes every impression count.
-          </p>
+          <div className="max-w-xl space-y-4">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Empirical Media has spent over a decade building trust, transparency, and measurable impact in India's television advertising ecosystem. Today, we are redefining what a media agency can be — evolving into a Full-Funnel Marketing Intelligence Partner that unites Linear TV, Connected TV (CTV), Digital, and Commerce into one seamless performance framework.
+            </p>
+            <p className="italic text-foreground/80">Empirical Media makes every impression count.</p>
+          </div>
+
 
           <div className="flex flex-wrap gap-3 md:justify-end">
             <Link
