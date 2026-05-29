@@ -41,7 +41,7 @@ export default function Hero() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-2xl border border-border px-6 py-4 font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 rounded-2xl bg-orange-300 px-6 py-4 font-semibold text-black transition hover:bg-orange-400"
             >
               <Calendar size={18} />
               Book a meeting
