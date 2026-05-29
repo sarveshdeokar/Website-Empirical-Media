@@ -30,10 +30,18 @@ export const services: Service[] = [
     slug: "digital-marketing",
     number: "03",
     title: "Digital Marketing",
-    tagline: "Performance with a point of view.",
+    tagline: "End-to-end funnel — Capture to Lead, Capture to Sales.",
     description:
-      "Full-funnel digital — paid social, search, programmatic and SEO — engineered around your acquisition economics.",
-    capabilities: ["Paid social", "Search & SEO", "Programmatic", "Lifecycle & CRM"],
+      "We engineer the full digital funnel — from first impression to qualified lead to closed sale. Two integrated playbooks: Capture to Lead (intent capture, qualification, nurture, CRM hand-off) and Capture to Sales (performance media, marketplace pull-through, conversion ops). Every rupee mapped to a measurable outcome across Google, Meta, YouTube, programmatic and commerce platforms.",
+    capabilities: [
+      "Capture-to-Lead funnels",
+      "Capture-to-Sales funnels",
+      "Paid social & search",
+      "Programmatic & YouTube",
+      "SEO & content",
+      "Lifecycle, CRM & retargeting",
+      "Attribution & MMM",
+    ],
   },
   {
     slug: "marketplace-management",
@@ -54,14 +62,22 @@ export const services: Service[] = [
     capabilities: ["UX & UI design", "Headless web", "Shopify & D2C", "Web apps"],
   },
   {
-    slug: "branding-as-a-service",
+    slug: "full-stack-marketing",
     number: "06",
-    title: "Branding as a Service",
-    tagline: "Your brand team — on retainer.",
+    title: "Full-Stack Marketing",
+    tagline: "Branding, content, campaigns and growth — under one roof.",
     description:
-      "Identity systems, design ops and ongoing creative direction subscribed monthly. No more frozen brand books.",
-    capabilities: ["Identity systems", "Design ops", "Brand guidelines", "Retainer creative"],
+      "Your end-to-end marketing function on retainer. Brand identity and guidelines, design ops, content engines, campaign craft, performance media and analytics — operating as one integrated team so every brand decision and every growth lever pull in the same direction.",
+    capabilities: [
+      "Brand identity & guidelines",
+      "Design ops & creative retainer",
+      "Content & campaign engines",
+      "Performance + brand media",
+      "Social & community",
+      "Reporting & insights",
+    ],
   },
+
   {
     slug: "data-insights",
     number: "07",
