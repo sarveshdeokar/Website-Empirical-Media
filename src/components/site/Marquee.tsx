@@ -1,44 +1,38 @@
-import { clients } from "@/lib/clients";
+const clients = Object.entries(
+  import.meta.glob("@/assets/clients/*.{png,jpg,jpeg,webp}", {
+    eager: true,
+    import: "default",
+  }),
+) as [string, string][];
 
 export default function Marquee() {
   const loop = [...clients, ...clients];
   return (
-    <section className="relative py-24 border-y border-border">
-      <div className="mx-auto max-w-7xl px-6 mb-10 flex items-baseline justify-between gap-6">
-        <h2 className="font-display text-2xl md:text-4xl font-bold tracking-tight">
-          Trusted across <span className="text-foreground/40">FMCG, Retail & Wellness</span>
+    <section className="relative py-20 overflow-hidden border-y border-border">
+      <div className="mx-auto max-w-7xl px-6 mb-10 flex items-baseline justify-between">
+        <h2 className="font-display text-2xl md:text-3xl">
+          Trusted across <span className="text-gradient">FMCG, Retail & Wellness</span>
         </h2>
-        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/40 hidden md:block">
+        <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground hidden md:block">
           // {clients.length}+ partners
         </span>
       </div>
       <div className="relative">
-        <div
-          className="absolute left-0 top-0 bottom-0 w-32 z-10"
-          style={{ background: "linear-gradient(to right, var(--background), transparent)" }}
-        />
-        <div
-          className="absolute right-0 top-0 bottom-0 w-32 z-10"
-          style={{ background: "linear-gradient(to left, var(--background), transparent)" }}
-        />
-        <div className="flex gap-6 animate-marquee w-max items-center">
-          {loop.map((c, i) => (
-            <a
-              key={c.name + i}
-              href={c.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={c.name}
-              className="relative h-36 w-64 flex items-center justify-center shrink-0 rounded-2xl bg-white border border-black/10 px-8 shadow-[0_2px_12px_-4px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_-6px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all duration-500 group overflow-hidden"
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+        <div className="flex gap-14 animate-marquee w-max items-center">
+          {loop.map(([path, src], i) => (
+            <div
+              key={path + i}
+              className="h-20 w-40 flex items-center justify-center shrink-0 rounded-xl bg-card border border-border px-4"
             >
               <img
-                src={c.logo}
-                alt={c.name}
+                src={src}
+                alt=""
                 loading="lazy"
-                className="max-h-28 max-w-[80%] object-contain"
+                className="max-h-14 max-w-full object-contain opacity-90 hover:opacity-100 transition"
               />
-            </a>
-
+            </div>
           ))}
         </div>
       </div>

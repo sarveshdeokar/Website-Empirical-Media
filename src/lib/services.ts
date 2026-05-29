@@ -30,18 +30,19 @@ export const services: Service[] = [
     slug: "digital-marketing",
     number: "03",
     title: "Digital Marketing",
-    tagline: "End-to-end funnel — Capture to Lead, Capture to Sales.",
+    tagline: "Performance with a point of view.",
     description:
-      "We engineer the full digital funnel — from first impression to qualified lead to closed sale. Two integrated playbooks: Capture to Lead (intent capture, qualification, nurture, CRM hand-off) and Capture to Sales (performance media, marketplace pull-through, conversion ops). Every rupee mapped to a measurable outcome across Google, Meta, YouTube, programmatic and commerce platforms.",
-    capabilities: [
-      "Capture-to-Lead funnels",
-      "Capture-to-Sales funnels",
-      "Paid social & search",
-      "Programmatic & YouTube",
-      "SEO & content",
-      "Lifecycle, CRM & retargeting",
-      "Attribution & MMM",
-    ],
+      "Full-funnel digital — paid social, search, programmatic and SEO — engineered around your acquisition economics.",
+    capabilities: ["Paid social", "Search & SEO", "Programmatic", "Lifecycle & CRM"],
+  },
+  {
+    slug: "marketplace-management",
+    number: "04",
+    title: "Marketplace Management",
+    tagline: "Win the shelf — wherever your customer scrolls.",
+    description:
+      "End-to-end management across Amazon, Flipkart, Myntra and quick-commerce, from listing craft to ads and growth.",
+    capabilities: ["Listing & A+ content", "Marketplace ads", "Catalog ops", "Quick-commerce"],
   },
   {
     slug: "product-design",
@@ -53,22 +54,14 @@ export const services: Service[] = [
     capabilities: ["UX & UI design", "Headless web", "Shopify & D2C", "Web apps"],
   },
   {
-    slug: "full-stack-marketing",
+    slug: "branding-as-a-service",
     number: "06",
-    title: "Full-Stack Marketing",
-    tagline: "Branding, content, campaigns and growth — under one roof.",
+    title: "Branding as a Service",
+    tagline: "Your brand team — on retainer.",
     description:
-      "Your end-to-end marketing function on retainer. Brand identity and guidelines, design ops, content engines, campaign craft, performance media and analytics — operating as one integrated team so every brand decision and every growth lever pull in the same direction.",
-    capabilities: [
-      "Brand identity & guidelines",
-      "Design ops & creative retainer",
-      "Content & campaign engines",
-      "Performance + brand media",
-      "Social & community",
-      "Reporting & insights",
-    ],
+      "Identity systems, design ops and ongoing creative direction subscribed monthly. No more frozen brand books.",
+    capabilities: ["Identity systems", "Design ops", "Brand guidelines", "Retainer creative"],
   },
-
   {
     slug: "data-insights",
     number: "07",

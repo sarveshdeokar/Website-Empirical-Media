@@ -19,7 +19,7 @@ export default function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto max-w-7xl px-6 pt-5">
-        <nav className="rounded-2xl flex items-center justify-between px-4 py-2.5 border border-border/60 backdrop-blur-xl bg-background/70 supports-[backdrop-filter]:bg-background/55 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.15)]">
+        <nav className="glass rounded-2xl flex items-center justify-between px-4 py-2.5">
           <Link to="/" className="flex items-center gap-2.5">
             <img src={logo} alt="Empirical Media" className="h-12 w-auto" />
           </Link>
@@ -54,7 +54,7 @@ export default function Nav() {
           </div>
         </nav>
         {open && (
-          <div className="rounded-2xl mt-2 p-4 lg:hidden space-y-1 border border-border/60 backdrop-blur-xl bg-background/85 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.15)]">
+          <div className="glass rounded-2xl mt-2 p-4 lg:hidden space-y-1">
             {links.map((l) => (
               <Link
                 key={l.to}
