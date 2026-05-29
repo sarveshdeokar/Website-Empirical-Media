@@ -70,13 +70,13 @@ export default function Marquee() {
               rel="noopener noreferrer"
               title={c.name}
               aria-label={`Visit ${c.name}`}
-              className="group h-24 w-44 flex items-center justify-center shrink-0 rounded-2xl bg-white border border-black/5 px-5 shadow-[0_2px_10px_-2px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 transition-all"
+              className="group h-36 w-60 flex items-center justify-center shrink-0 rounded-2xl bg-white border border-black/5 px-6 py-4 shadow-[0_2px_10px_-2px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 transition-all"
             >
               <img
                 src={c.src}
                 alt={c.name}
                 loading="lazy"
-                className="max-h-14 max-w-full object-contain opacity-90 group-hover:opacity-100 transition"
+                className="max-h-28 max-w-full object-contain opacity-95 group-hover:opacity-100 transition"
               />
             </a>
           ))}
