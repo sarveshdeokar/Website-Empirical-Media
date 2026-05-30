@@ -83,9 +83,14 @@
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
+@keyframes ambient-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(var(--drift-x, 0), var(--drift-y, -20px), 0); }
+}
 
 .animate-neon-float { animation: neon-float ease-in-out infinite; will-change: transform; }
 .animate-neon-spin  { animation: neon-spin 22s linear infinite; }
+.animate-ambient-float { animation: ambient-float ease-in-out infinite; will-change: transform; }
 
 
 /* LIGHT THEME (default — white-based, logo-friendly) */
