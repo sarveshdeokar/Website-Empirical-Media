@@ -102,7 +102,7 @@
   --card-foreground: oklch(0.18 0.02 260);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.02 260);
-  --primary: oklch(0.62 0.22 25);          /* warm coral/red — matches logo */
+  --primary: #f72b2b;          /* matches brand red */
   --primary-foreground: oklch(0.99 0.003 80);
   --secondary: oklch(0.75 0.16 85);         /* warm yellow accent — matches logo dot */
   --secondary-foreground: oklch(0.18 0.02 260);
