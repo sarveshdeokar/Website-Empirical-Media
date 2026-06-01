@@ -44,11 +44,12 @@ function AboutPage() {
 
         <section className="py-16 border-y border-border">
 
-          <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-6xl px-6 text-center">
             <span className="font-mono text-xs uppercase tracking-widest text-primary">// Our Differentiator</span>
-            <h2 className="mt-3 font-display text-4xl md:text-6xl font-bold tracking-tighter">
+            <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tighter">
               Independent. Insight-Driven. <span className="text-gradient">Integrated.</span>
             </h2>
+
             <div className="mt-12 grid md:grid-cols-2 gap-px bg-border rounded-3xl overflow-hidden">
               {[
                 ["No Media Bias", "We don't sell ad inventory. We provide neutral, data-based advice."],
