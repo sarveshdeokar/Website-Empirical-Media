@@ -89,12 +89,34 @@ function ContactPage() {
               </button>
             </form>
 
-            <aside className="space-y-px bg-border rounded-3xl overflow-hidden">
-              <ContactCard icon={<Mail size={18} />} label="New business" value="sales@empiricalmedia.in" href="mailto:sales@empiricalmedia.in" />
-              <ContactCard icon={<Phone size={18} />} label="Say hello" value="+91 63667 99955" href="tel:+916366799955" />
-              <ContactCard icon={<Linkedin size={18} />} label="LinkedIn" value="empiricalmediabangalore" href="https://www.linkedin.com/company/empiricalmediabangalore/" />
-              <ContactCard icon={<MapPin size={18} />} label="Studio" value="#367, 2nd Floor, 8th Main Road, 11th Cross, 2nd Block, Jayanagar, Bengaluru, Karnataka 560011" />
+            <aside className="flex flex-col gap-4">
+              <div className="space-y-px bg-border rounded-3xl overflow-hidden">
+                <ContactCard icon={<Mail size={18} />} label="New business" value="sales@empiricalmedia.in" href="mailto:sales@empiricalmedia.in" />
+                <ContactCard icon={<Phone size={18} />} label="Say hello" value="+91 63667 99955" href="tel:+916366799955" />
+                <ContactCard icon={<Linkedin size={18} />} label="LinkedIn" value="empiricalmediabangalore" href="https://www.linkedin.com/company/empiricalmediabangalore/" />
+                <ContactCard icon={<MapPin size={18} />} label="Studio" value="#367, 2nd Floor, 8th Main Road, 11th Cross, 2nd Block, Jayanagar, Bengaluru, Karnataka 560011" />
+              </div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Empirical+Media+%23367+8th+Main+Road+11th+Cross+2nd+Block+Jayanagar+Bengaluru+560011"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block rounded-3xl overflow-hidden border border-border bg-card hover:border-primary/50 transition flex-1 min-h-[280px]"
+                aria-label="Open studio location in Google Maps"
+              >
+                <iframe
+                  title="Empirical Media studio location"
+                  src="https://www.google.com/maps?q=%23367%2C+2nd+Floor%2C+8th+Main+Road%2C+11th+Cross%2C+2nd+Block%2C+Jayanagar%2C+Bengaluru%2C+Karnataka+560011&output=embed"
+                  className="absolute inset-0 w-full h-full grayscale contrast-110 group-hover:grayscale-0 transition duration-500"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <div className="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-background/90 backdrop-blur px-3 py-1.5 text-xs font-mono uppercase tracking-widest border border-border">
+                  <MapPin size={12} className="text-primary" /> Open in Maps
+                  <ArrowUpRight size={12} />
+                </div>
+              </a>
             </aside>
+
           </div>
         </section>
 
