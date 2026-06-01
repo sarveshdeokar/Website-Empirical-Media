@@ -65,47 +65,72 @@ function AboutPage() {
         </section>
 
         <section className="py-24">
-          <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16">
-            <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-primary">// Data Intelligence Engine</span>
-              <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tighter">
-                Turning Data into <span className="text-gradient">Marketing Clarity.</span>
-              </h2>
-              <p className="mt-6 text-muted-foreground">
-                Our proprietary analytics framework brings every layer of data together:
-              </p>
-              <ul className="mt-6 space-y-4">
-                {[
-                  ["Media × CTV Fusion Models", "Measure overlap and incremental reach."],
-                  ["Attribution Mapping", "Link exposure to engagement and sales."],
-                  ["Regional Analytics", "Decode linguistic and cultural nuances of South India."],
-                  ["ROI Dashboards", "Unified visualization of spend, reach, and performance."],
-                ].map(([t, d]) => (
-                  <li key={t} className="border-l-2 border-primary/40 pl-4">
-                    <div className="font-semibold">{t}</div>
-                    <div className="text-sm text-muted-foreground">{d}</div>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-8 italic text-foreground/80">
-                Empirical transforms raw media data into actionable marketing intelligence.
-              </p>
-            </div>
+          <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-8">
+            <article className="group relative overflow-hidden rounded-3xl bg-card border border-border p-10 md:p-12 hover:border-primary/40 transition">
+              <div
+                className="absolute -top-32 -right-32 h-72 w-72 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition"
+                style={{ background: "radial-gradient(circle, var(--primary), transparent 70%)" }}
+              />
+              <div className="relative">
+                <span className="font-mono text-xs uppercase tracking-widest text-primary">// Data Intelligence Engine</span>
+                <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tighter">
+                  Turning Data into <span className="text-gradient">Marketing Clarity.</span>
+                </h2>
+                <p className="mt-6 text-muted-foreground">
+                  Our proprietary analytics framework brings every layer of data together:
+                </p>
+                <ul className="mt-8 grid sm:grid-cols-2 gap-4">
+                  {[
+                    ["Media × CTV Fusion Models", "Measure overlap and incremental reach."],
+                    ["Attribution Mapping", "Link exposure to engagement and sales."],
+                    ["Regional Analytics", "Decode linguistic and cultural nuances of South India."],
+                    ["ROI Dashboards", "Unified visualization of spend, reach, and performance."],
+                  ].map(([t, d]) => (
+                    <li key={t} className="rounded-2xl bg-surface-elevated/50 border border-border/60 p-5">
+                      <div className="font-display font-semibold text-gradient">{t}</div>
+                      <div className="mt-1 text-sm text-muted-foreground">{d}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-8 italic text-foreground/80 border-l-2 border-primary/60 pl-4">
+                  Empirical transforms raw media data into actionable marketing intelligence.
+                </p>
+              </div>
+            </article>
 
-            <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-primary">// Impact Measurement</span>
-              <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tighter">
-                From Awareness <span className="text-gradient">to Shelf.</span>
-              </h2>
-              <p className="mt-6 text-muted-foreground leading-relaxed">
-                Our analytics go beyond screens — connecting media exposure to actual market movement. Through geo-level mapping and retail data correlation, we track how awareness created by TV or CTV translates into offline sales uplift and retail velocity.
-              </p>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
-                This is true full-funnel measurement — closing the loop between campaign and consumer.
-              </p>
-            </div>
+            <article className="group relative overflow-hidden rounded-3xl bg-card border border-border p-10 md:p-12 hover:border-primary/40 transition flex flex-col">
+              <div
+                className="absolute -bottom-32 -left-32 h-72 w-72 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition"
+                style={{ background: "radial-gradient(circle, var(--secondary), transparent 70%)" }}
+              />
+              <div className="relative">
+                <span className="font-mono text-xs uppercase tracking-widest text-primary">// Impact Measurement</span>
+                <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tighter">
+                  From Awareness <span className="text-gradient">to Shelf.</span>
+                </h2>
+                <p className="mt-6 text-muted-foreground leading-relaxed">
+                  Our analytics go beyond screens — connecting media exposure to actual market movement. Through geo-level mapping and retail data correlation, we track how awareness created by TV or CTV translates into offline sales uplift and retail velocity.
+                </p>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  This is true full-funnel measurement — closing the loop between campaign and consumer.
+                </p>
+              </div>
+              <div className="relative mt-auto pt-10 grid grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden">
+                {[
+                  ["Geo", "Mapping"],
+                  ["Retail", "Velocity"],
+                  ["Full", "Funnel"],
+                ].map(([k, v]) => (
+                  <div key={k} className="bg-surface-elevated/50 p-4 text-center">
+                    <div className="font-display text-lg font-bold text-gradient">{k}</div>
+                    <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">{v}</div>
+                  </div>
+                ))}
+              </div>
+            </article>
           </div>
         </section>
+
 
         <section className="py-24 border-t border-border">
           <div className="mx-auto max-w-7xl px-6">
