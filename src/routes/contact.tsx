@@ -94,7 +94,7 @@ function ContactPage() {
                 <ContactCard icon={<Mail size={18} />} label="New business" value="sales@empiricalmedia.in" href="mailto:sales@empiricalmedia.in" />
                 <ContactCard icon={<Phone size={18} />} label="Say hello" value="+91 63667 99955" href="tel:+916366799955" />
                 <ContactCard icon={<Linkedin size={18} />} label="LinkedIn" value="empiricalmediabangalore" href="https://www.linkedin.com/company/empiricalmediabangalore/" />
-                <ContactCard icon={<MapPin size={18} />} label="Studio" value="#367, 2nd Floor, 8th Main Road, 11th Cross, 2nd Block, Jayanagar, Bengaluru, Karnataka 560011" />
+                <ContactCard icon={<MapPin size={18} />} label="Address" value="#367, 2nd Floor, 8th Main Road, 11th Cross, 2nd Block, Jayanagar, Bengaluru, Karnataka 560011" />
               </div>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=WHQM%2B92+Bengaluru%2C+Karnataka"
