@@ -66,8 +66,9 @@ function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24">
-          <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-8">
+        <section className="py-16">
+          <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-8">
+
             <article className="group relative overflow-hidden rounded-3xl bg-card border border-border p-10 md:p-12 hover:border-primary/40 transition">
               <div
                 className="absolute -top-32 -right-32 h-72 w-72 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition"
