@@ -19,11 +19,11 @@ function AboutPage() {
     <div className="min-h-screen">
       <Nav />
       <main>
-        <section className="relative pt-40 pb-20 noise">
+        <section className="relative pt-32 pb-12 noise">
           <div className="absolute inset-0 grid-bg opacity-50" />
-          <div className="relative mx-auto max-w-7xl px-6">
+          <div className="relative mx-auto max-w-4xl px-6 text-center">
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">// About Us</span>
-            <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
+            <h1 className="mt-4 font-display text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95]">
               The Intelligence
               <br />
               Behind <span className="text-gradient">Every Campaign.</span>
@@ -31,18 +31,19 @@ function AboutPage() {
           </div>
         </section>
 
-        <section className="py-20">
-          <div className="mx-auto max-w-4xl px-6 flex flex-col gap-8">
-            <p className="text-xl md:text-2xl leading-relaxed text-foreground">
+        <section className="pb-16">
+          <div className="mx-auto max-w-4xl px-6 flex flex-col gap-6 text-center">
+            <p className="text-lg md:text-xl leading-relaxed text-foreground">
               Empirical Media was founded on a simple belief — every <span className="text-gradient">advertising rupee</span> should deliver <span className="text-gradient">measurable value</span>. Our journey began in <span className="text-gradient">television planning</span> and <span className="text-gradient">auditing</span>, where we helped leading brands optimize their <span className="text-gradient">BARC performance</span>, reduce <span className="text-gradient">wastage</span>, and increase <span className="text-gradient">ROI</span>.
             </p>
-            <p className="text-xl md:text-2xl leading-relaxed text-foreground/80">
+            <p className="text-lg md:text-xl leading-relaxed text-foreground/80">
               As consumer attention shifted across devices, so did we. Today, Empirical Media bridges broadcast scale with <span className="text-gradient">digital precision</span>, combining deep <span className="text-gradient">data analytics</span>, <span className="text-gradient">platform insights</span>, and <span className="text-gradient">commerce intelligence</span> to build <span className="text-gradient">campaigns</span> that connect <span className="text-gradient">awareness</span> to <span className="text-gradient">action</span>.
             </p>
           </div>
         </section>
 
-        <section className="py-20 border-y border-border">
+        <section className="py-16 border-y border-border">
+
           <div className="mx-auto max-w-7xl px-6">
             <span className="font-mono text-xs uppercase tracking-widest text-primary">// Our Differentiator</span>
             <h2 className="mt-3 font-display text-4xl md:text-6xl font-bold tracking-tighter">
