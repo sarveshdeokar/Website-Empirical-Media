@@ -31,10 +31,13 @@ function ContactPage() {
           <div className="relative mx-auto max-w-7xl px-6">
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">// Contact</span>
             <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
-              Let's make
+              Ready to scale your
               <br />
-              <span className="text-gradient">something work.</span>
+              <span className="text-gradient">market intelligence?</span>
             </h1>
+            <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
+              Move beyond traditional media buying. Let's engineer a custom performance framework that turns your data into definitive growth.
+            </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={BOOKING_URL}
