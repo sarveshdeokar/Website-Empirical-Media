@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl px-6 w-full">
 
         <h1 className="font-display sm:text-7xl lg:text-[8.5rem] font-bold leading-[0.92] tracking-tighter text-2xl">
-          <span className="text-orange-300">From Television</span>
+          <span className="text-[#f72b2b]">From Television</span>
           <br />
           to Total Marketing<br />Intelligence
         </h1>
@@ -41,7 +41,7 @@ export default function Hero() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-2xl bg-orange-300 px-6 py-4 font-semibold text-black transition hover:bg-orange-400"
+              className="inline-flex items-center gap-2 rounded-2xl bg-[#f72b2b] px-6 py-4 font-semibold text-white transition hover:bg-[#d92626]"
             >
               <Calendar size={18} />
               Book a meeting
