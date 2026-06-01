@@ -21,7 +21,7 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-6 w-full">
 
-        <h1 className="font-display text-5xl sm:text-7xl lg:text-[8.5rem] font-bold leading-[0.92] tracking-tighter">
+        <h1 className="font-display sm:text-7xl lg:text-[8.5rem] font-bold leading-[0.92] tracking-tighter text-2xl">
           <span className="text-orange-300">From Television</span>
           <br />
           to Total Marketing<br />Intelligence
