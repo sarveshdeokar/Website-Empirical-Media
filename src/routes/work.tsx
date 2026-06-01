@@ -44,7 +44,9 @@ export default function WorkPage() {
             {cases.map((c, i) => (
               <article
                 key={i}
-                className="group relative bg-card p-10 md:p-14 min-h-[340px] flex flex-col justify-between overflow-hidden hover:bg-surface-elevated transition"
+                className={`group relative bg-card p-10 md:p-14 min-h-[340px] flex flex-col justify-between overflow-hidden hover:bg-surface-elevated transition ${
+                  i === 2 ? "md:col-span-2" : ""
+                }`}
               >
                 <div
                   className="absolute -bottom-32 -right-32 h-64 w-64 rounded-full blur-3xl opacity-0 group-hover:opacity-40 transition"
@@ -59,6 +61,7 @@ export default function WorkPage() {
             ))}
           </div>
         </section>
+
 
         <Marquee />
         
