@@ -97,7 +97,7 @@ function ContactPage() {
                 <ContactCard icon={<MapPin size={18} />} label="Studio" value="#367, 2nd Floor, 8th Main Road, 11th Cross, 2nd Block, Jayanagar, Bengaluru, Karnataka 560011" />
               </div>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Empirical+Media+%23367+8th+Main+Road+11th+Cross+2nd+Block+Jayanagar+Bengaluru+560011"
+                href="https://www.google.com/maps/search/?api=1&query=WHQM%2B92+Bengaluru%2C+Karnataka"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative block rounded-3xl overflow-hidden border border-border bg-card hover:border-primary/50 transition flex-1 min-h-[280px]"
@@ -105,7 +105,7 @@ function ContactPage() {
               >
                 <iframe
                   title="Empirical Media studio location"
-                  src="https://www.google.com/maps?q=%23367%2C+2nd+Floor%2C+8th+Main+Road%2C+11th+Cross%2C+2nd+Block%2C+Jayanagar%2C+Bengaluru%2C+Karnataka+560011&output=embed"
+                  src="https://www.google.com/maps?q=WHQM%2B92+Bengaluru%2C+Karnataka&output=embed"
                   className="absolute inset-0 w-full h-full grayscale contrast-110 group-hover:grayscale-0 transition duration-500"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
