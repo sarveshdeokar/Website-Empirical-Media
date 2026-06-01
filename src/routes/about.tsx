@@ -135,15 +135,16 @@ function AboutPage() {
         </section>
 
 
-        <section className="py-24 border-t border-border">
-          <div className="mx-auto max-w-7xl px-6">
+        <section className="py-20 border-t border-border">
+          <div className="mx-auto max-w-4xl px-6 text-center">
             <span className="font-mono text-xs uppercase tracking-widest text-primary">// Vision</span>
-            <h2 className="mt-3 font-display text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95]">
+            <h2 className="mt-3 font-display text-4xl md:text-6xl font-bold tracking-tighter leading-[0.95]">
               Bridging Broadcast <br/>and <span className="text-gradient">Digital.</span>
             </h2>
-            <p className="mt-8 max-w-3xl text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-6 mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
               Empirical Media's vision is to be India's leading Marketing Intelligence Consultancy, redefining the agency's role from media buyer to strategic growth partner. We unite the art of storytelling with the science of analytics, enabling marketers to see the real impact of every campaign, across every touchpoint.
             </p>
+
           </div>
         </section>
 
