@@ -9,24 +9,23 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <img src={logo} alt="Empirical Media" className="h-14 w-auto" />
-            <p className="mt-4 text-sm text-muted-foreground max-w-sm">
+            <p className="mt-4 text-lg text-muted-foreground max-w-sm">
               India's marketing intelligence consultancy — uniting Linear TV, Connected TV,
               Digital and Commerce into one measurable performance framework.
             </p>
           </div>
           <div>
-            <h4 className="font-mono uppercase text-xs tracking-widest text-muted-foreground">Studio</h4>
-            <ul className="mt-4 space-y-2 text-sm">
+            <h4 className="font-mono uppercase text-lg tracking-widest text-muted-foreground">Studio</h4>
+            <ul className="mt-4 space-y-2 text-lg">
               <li><Link to="/services" className="hover:text-primary">Services</Link></li>
-              <li><Link to="/work" className="hover:text-primary">Work</Link></li>
               <li><Link to="/team" className="hover:text-primary">Team</Link></li>
               <li><Link to="/about" className="hover:text-primary">About</Link></li>
               <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-mono uppercase text-xs tracking-widest text-muted-foreground">Reach us</h4>
-            <ul className="mt-4 space-y-2 text-sm">
+            <h4 className="font-mono uppercase text-lg tracking-widest text-muted-foreground">Reach us</h4>
+            <ul className="mt-4 space-y-2 text-lg">
               <li><a href="mailto:sales@empiricalmedia.in" className="hover:text-primary">sales@empiricalmedia.in</a></li>
               <li><a href="tel:+916366799955" className="hover:text-primary">+91 63667 99955</a></li>
               <li><a href="https://www.linkedin.com/company/empiricalmediabangalore/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">LinkedIn ↗</a></li>
@@ -34,7 +33,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row justify-between gap-3 text-xs font-mono text-muted-foreground">
+        <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row justify-between gap-3 text-lg font-mono text-muted-foreground">
           <span>© {new Date().getFullYear()} Empirical Media Pvt. Ltd.</span>
           <span>Bengaluru · India · Worldwide</span>
         </div>
