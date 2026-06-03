@@ -59,7 +59,7 @@ export default function Nav() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="block px-3 py-2 rounded-lg text-sm font-bold hover:bg-muted"
+                className="block px-3 py-3 rounded-lg text-lg font-bold uppercase tracking-widest hover:bg-muted"
               >
                 {l.label}
               </Link>
@@ -68,9 +68,9 @@ export default function Nav() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-bold"
+              className="mt-2 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-3 text-lg font-bold"
             >
-              <Calendar size={15} />
+              <Calendar size={20} />
               Book a meeting
             </a>
           </div>
