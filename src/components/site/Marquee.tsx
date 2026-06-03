@@ -55,8 +55,8 @@ export default function Marquee() {
         <h2 className="mt-3 font-display text-3xl md:text-5xl font-bold tracking-tighter">
           Building Trust <span className="text-gradient">Across Categories</span>
         </h2>
-        <p className="mt-4 max-w-3xl text-muted-foreground">
-          Empirical Media partners with leading brands across FMCG, Personal Care, Retail, E-Commerce, Hospitality, and Wellness. From emerging startups to established national advertisers, our clients value one thing above all — transparency and measurable results. We serve clients in Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, and Kerala — bringing regional expertise and local market insights that drive superior campaign outcomes.
+        <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
+          Empirical Media partners with leading brands across FMCG, Personal Care, Retail, E-Commerce, Hospitality, and Wellness. From emerging startups to established national advertisers, our clients value one thing above all — transparency and measurable results. We serve clients in Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Kerala and Maharashtra — bringing regional expertise and local market insights that drive superior campaign outcomes.
         </p>
       </div>
 
