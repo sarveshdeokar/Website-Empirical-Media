@@ -17,7 +17,7 @@ export default function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto max-w-7xl px-6 pt-6">
-        <nav className="glass rounded-2xl grid grid-cols-[auto_1fr_auto] items-center px-4 sm:px-6 py-3 gap-3">
+        <nav className="grid grid-cols-[auto_1fr_auto] items-center px-4 sm:px-6 py-3 gap-3">
           <Link to="/" className="flex items-center shrink-0 py-2">
             <img src={logo} alt="Empirical Media" className="h-14 sm:h-20 w-auto" />
           </Link>
@@ -44,7 +44,7 @@ export default function Nav() {
           </div>
         </nav>
         {open && (
-          <div className="glass rounded-2xl mt-2 p-4 lg:hidden space-y-1">
+          <div className="mt-2 p-4 lg:hidden space-y-1">
             {links.map((l) => (
               <Link
                 key={l.to}
