@@ -75,7 +75,7 @@ function TeamPage() {
         </section>
 
         <section className="py-16">
-          <div className="mx-auto max-w-4xl px-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="mx-auto max-w-4xl px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
             {team.map((m) => (
               <article
                 key={m.name}
