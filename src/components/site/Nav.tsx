@@ -68,7 +68,7 @@ export default function Nav() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-medium"
+              className="mt-2 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-xl font-medium"
             >
               <Calendar size={15} />
               Book a meeting
