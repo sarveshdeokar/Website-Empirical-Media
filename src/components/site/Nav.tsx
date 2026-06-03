@@ -18,25 +18,28 @@ export default function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto max-w-7xl px-6 pt-6">
-        <nav className="glass rounded-2xl flex items-center justify-between px-4 sm:px-6 py-3.5 gap-3">
-          <Link to="/" className="flex items-center gap-2.5 shrink-0">
-            <img src={logo} alt="Empirical Media" className="h-14 sm:h-20 w-auto" />
-          </Link>
+        <nav className="glass rounded-2xl flex items-center px-4 sm:px-6 py-3.5 gap-3">
+          <div className="flex-1" />
+          <div className="flex items-center gap-6">
+            <Link to="/" className="flex items-center gap-2.5 shrink-0">
+              <img src={logo} alt="Empirical Media" className="h-14 sm:h-20 w-auto" />
+            </Link>
             <ul className="hidden lg:flex items-center gap-6 text-xl font-bold uppercase tracking-widest">
-            {links.map((l) => (
-              <li key={l.to}>
-                <Link
-                  to={l.to}
-                  className="px-4 py-2 rounded-lg text-muted-foreground hover:text-foreground transition-colors"
-                  activeProps={{ className: "px-4 py-2 rounded-lg text-foreground bg-muted" }}
-                  activeOptions={{ exact: l.to === "/" }}
-                >
-                  {l.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="flex items-center gap-4 shrink-0">
+              {links.map((l) => (
+                <li key={l.to}>
+                  <Link
+                    to={l.to}
+                    className="px-4 py-2 rounded-lg text-muted-foreground hover:text-foreground transition-colors"
+                    activeProps={{ className: "px-4 py-2 rounded-lg text-foreground bg-muted" }}
+                    activeOptions={{ exact: l.to === "/" }}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex-1 flex items-center justify-end gap-4 shrink-0">
             <ThemeToggle />
             <a
               href={BOOKING_URL}
