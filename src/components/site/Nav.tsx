@@ -22,13 +22,13 @@ export default function Nav() {
           <Link to="/" className="flex items-center gap-2.5">
             <img src={logo} alt="Empirical Media" className="h-14 w-auto" />
           </Link>
-            <ul className="hidden lg:flex items-center gap-1 text-base uppercase tracking-widest">
+            <ul className="hidden lg:flex items-center gap-4 text-base uppercase tracking-widest">
             {links.map((l) => (
               <li key={l.to}>
                 <Link
                   to={l.to}
-                  className="px-3 py-2 rounded-lg text-muted-foreground hover:text-foreground transition-colors"
-                  activeProps={{ className: "px-3 py-2 rounded-lg text-foreground bg-muted" }}
+                  className="px-4 py-2 rounded-lg text-muted-foreground hover:text-foreground transition-colors"
+                  activeProps={{ className: "px-4 py-2 rounded-lg text-foreground bg-muted" }}
                   activeOptions={{ exact: l.to === "/" }}
                 >
                   {l.label}
@@ -36,15 +36,15 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <ThemeToggle />
             <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:shadow-[var(--shadow-glow)] transition"
+              className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-6 py-3 text-base font-medium hover:shadow-[var(--shadow-glow)] transition"
             >
-              <Calendar size={15} />
+              <Calendar size={18} />
               Book a meeting
             </a>
             <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground">
