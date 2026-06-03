@@ -16,12 +16,12 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed top-0 inset-x-0 z-50">
-      <div className="mx-auto max-w-7xl px-6 pt-6">
-        <nav className="glass rounded-2xl grid grid-cols-[auto_1fr_auto] items-center px-4 sm:px-6 py-3 gap-3">
+      <div className="mx-auto max-w-7xl px-6 pt-8">
+        <nav className="glass rounded-2xl grid grid-cols-[auto_1fr_auto] items-center px-4 sm:px-6 py-5 gap-3">
           <Link to="/" className="flex items-center shrink-0 py-2">
-            <img src={logo} alt="Empirical Media" className="h-14 sm:h-20 w-auto" />
+            <img src={logo} alt="Empirical Media" className="h-20 sm:h-28 w-auto" />
           </Link>
-          <ul className="hidden lg:flex items-center justify-center gap-6 text-xl font-bold uppercase tracking-widest">
+          <ul className="hidden lg:flex items-center justify-center gap-8 text-2xl font-bold uppercase tracking-widest">
             {links.map((l) => (
               <li key={l.to}>
                 <Link
