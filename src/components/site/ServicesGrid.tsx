@@ -31,7 +31,7 @@ export default function ServicesGrid() {
               <h3 className="mt-4 font-display text-xl font-semibold group-hover:text-primary transition">
                 {s.title}
               </h3>
-              <p className="mt-3 text-sm text-muted-foreground line-clamp-3">{s.tagline}</p>
+              <p className="mt-3 text-lg text-muted-foreground line-clamp-3">{s.tagline}</p>
               <ArrowUpRight
                 size={18}
                 className="mt-auto self-end text-muted-foreground group-hover:text-primary group-hover:-translate-y-1 group-hover:translate-x-1 transition"
