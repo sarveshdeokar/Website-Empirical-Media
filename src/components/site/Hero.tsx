@@ -49,10 +49,11 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden glass">
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-5 gap-px bg-border rounded-2xl overflow-hidden glass">
           {[
-            ["11+", "Years on the air"],
+            ["2018", "Founded"],
             ["21+", "Brand partners"],
+            ["1000+", "Projects Delivered"],
             ["4x", "Avg ROAS lift"],
             ["5", "South India states"],
           ].map(([k, v]) => (
