@@ -54,15 +54,6 @@ export default function Nav() {
                 {l.label}
               </Link>
             ))}
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-3 text-base font-bold"
-            >
-              <Calendar size={18} />
-              Book a meeting
-            </a>
           </div>
         )}
       </div>
