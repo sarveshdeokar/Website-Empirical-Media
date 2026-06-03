@@ -36,15 +36,15 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-4 shrink-0">
             <ThemeToggle />
             <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-7 py-3.5 text-[26px] font-bold hover:shadow-[var(--shadow-glow)] transition"
+              className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-6 py-3 text-xl font-bold hover:shadow-[var(--shadow-glow)] transition"
             >
-              <Calendar size={26} />
+              <Calendar size={20} />
               Book a meeting
             </a>
             <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground">
@@ -59,7 +59,7 @@ export default function Nav() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="block px-3 py-3 rounded-lg text-lg font-bold uppercase tracking-widest hover:bg-muted"
+                className="block px-3 py-3 rounded-lg text-base font-bold uppercase tracking-widest hover:bg-muted"
               >
                 {l.label}
               </Link>
@@ -68,9 +68,9 @@ export default function Nav() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-3 text-lg font-bold"
+              className="mt-2 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-3 text-base font-bold"
             >
-              <Calendar size={20} />
+              <Calendar size={18} />
               Book a meeting
             </a>
           </div>
