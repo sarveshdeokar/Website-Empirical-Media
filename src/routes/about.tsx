@@ -34,10 +34,10 @@ function AboutPage() {
         <section className="pb-16">
           <div className="mx-auto max-w-4xl px-6 flex flex-col gap-6 text-center">
             <p className="text-lg md:text-xl leading-relaxed text-foreground">
-              Empirical Media was founded on a simple belief — every <span className="text-gradient">advertising rupee</span> should deliver <span className="text-gradient">measurable value</span>. Our journey began in <span className="text-gradient">television planning</span> and <span className="text-gradient">auditing</span>, where we helped leading brands optimize their <span className="text-gradient">Campaign Performance</span>, reduce <span className="text-gradient">AD Spends</span>, and increase <span className="text-gradient">ROI</span>.
+              Empirical Media was founded on a simple belief — every advertising rupee should deliver measurable value. Our journey began in television planning and auditing, where we helped leading brands optimize their Campaign Performance, reduce AD Spends, and increase ROI.
             </p>
-            <p className="text-lg md:text-xl leading-relaxed text-foreground/80">
-              As consumer attention shifted across devices, so did we. Today, Empirical Media bridges broadcast scale with <span className="text-gradient">digital precision</span>, combining deep <span className="text-gradient">data analytics</span>, <span className="text-gradient">platform insights</span>, and <span className="text-gradient">commerce intelligence</span> to build <span className="text-gradient">campaigns</span> that connect <span className="text-gradient">awareness</span> to <span className="text-gradient">action</span>.
+            <p className="text-lg md:text-xl leading-relaxed text-foreground">
+              As consumer attention shifted across devices, so did we. Today, Empirical Media bridges broadcast scale with digital precision, combining deep data analytics, platform insights, and commerce intelligence to build campaigns that connect awareness to action.
             </p>
           </div>
         </section>
