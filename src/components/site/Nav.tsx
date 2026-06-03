@@ -18,12 +18,12 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed top-0 inset-x-0 z-50">
-      <div className="mx-auto max-w-7xl px-6 pt-5">
-        <nav className="glass rounded-2xl flex items-center justify-between px-4 py-2.5">
+      <div className="mx-auto max-w-7xl px-6 pt-6">
+        <nav className="glass rounded-2xl flex items-center justify-between px-6 py-3.5">
           <Link to="/" className="flex items-center gap-2.5">
-            <img src={logo} alt="Empirical Media" className="h-12 w-auto" />
+            <img src={logo} alt="Empirical Media" className="h-14 w-auto" />
           </Link>
-          <ul className="hidden lg:flex items-center gap-1 font-mono text-xs uppercase tracking-widest">
+            <ul className="hidden lg:flex items-center gap-1 text-sm uppercase tracking-widest">
             {links.map((l) => (
               <li key={l.to}>
                 <Link
