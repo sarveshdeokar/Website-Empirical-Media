@@ -9,7 +9,7 @@ import {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden noise">
+    <section className="relative min-h-screen flex items-center pt-44 pb-20 overflow-hidden noise">
       <div className="absolute inset-0 grid-bg animate-grid opacity-60 pointer-events-none" />
       <div
         className="absolute inset-0 pointer-events-none"
