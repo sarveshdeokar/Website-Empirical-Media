@@ -46,7 +46,7 @@ function ContactPage() {
                 className="inline-flex items-center gap-2 rounded-2xl bg-primary text-primary-foreground px-6 py-4 font-medium hover:shadow-[var(--shadow-glow)] transition"
               >
                 <Calendar size={18} />
-                Book a 30-min intro call
+                Book a Meeting
                 <ArrowUpRight size={16} className="opacity-80" />
               </a>
               <a
