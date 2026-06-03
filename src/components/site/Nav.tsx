@@ -1,8 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
-import { Menu, X, Calendar } from "lucide-react";
-import { BOOKING_URL } from "@/lib/booking";
+import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
 const links = [
@@ -22,7 +21,7 @@ export default function Nav() {
           <Link to="/" className="flex items-center gap-2.5 shrink-0">
             <img src={logo} alt="Empirical Media" className="h-14 sm:h-20 w-auto" />
           </Link>
-          <ul className="hidden lg:flex items-center gap-6 text-xl font-bold uppercase tracking-widest">
+          <ul className="hidden lg:flex items-center gap-6 text-xl font-bold uppercase tracking-widest ml-auto">
             {links.map((l) => (
               <li key={l.to}>
                 <Link
@@ -38,15 +37,6 @@ export default function Nav() {
           </ul>
           <div className="flex items-center gap-4 shrink-0">
             <ThemeToggle />
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-6 py-3 text-xl font-bold hover:shadow-[var(--shadow-glow)] transition"
-            >
-              <Calendar size={20} />
-              Book a meeting
-            </a>
             <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground">
               {open ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -64,15 +54,6 @@ export default function Nav() {
                 {l.label}
               </Link>
             ))}
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-3 text-base font-bold"
-            >
-              <Calendar size={18} />
-              Book a meeting
-            </a>
           </div>
         )}
       </div>
