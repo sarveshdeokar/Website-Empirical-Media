@@ -59,7 +59,7 @@ export default function Nav() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="block px-3 py-2 rounded-lg text-sm hover:bg-muted"
+                className="block px-3 py-2 rounded-lg text-xl hover:bg-muted"
               >
                 {l.label}
               </Link>
