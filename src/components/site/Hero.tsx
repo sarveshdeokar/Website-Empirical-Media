@@ -66,7 +66,7 @@ export default function Hero() {
               {[
                 ["2018", "Founded"],
                 ["21+", "Brand partners"],
-                ["10000+", "Projects Delivered"],
+                ["1000+", "Projects Delivered"],
               ].map(([k, v]) => (
                 <CarouselItem
                   key={k}
