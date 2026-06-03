@@ -42,7 +42,7 @@ export default function Nav() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-6 py-3 text-base font-medium hover:shadow-[var(--shadow-glow)] transition"
+              className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-8 py-4 text-xl font-medium hover:shadow-[var(--shadow-glow)] transition"
             >
               <Calendar size={18} />
               Book a meeting
