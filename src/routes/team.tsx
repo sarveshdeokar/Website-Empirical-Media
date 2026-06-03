@@ -5,7 +5,6 @@ import Footer from "@/components/site/Footer";
 import sandhya from "@/assets/team/sandhya.png";
 import gopala from "@/assets/team/gopala.png";
 import abhiram from "@/assets/team/abhiram.png";
-import ananth from "@/assets/team/ananth.png";
 import arvind from "@/assets/team/arvind.jpg";
 
 export const Route = createFileRoute("/team")({
@@ -47,12 +46,6 @@ const team: Member[] = [
     bio: "Over 17 years of industry and entrepreneurial experience. Builds operational excellence and manages the finance function, bringing expertise in operations, vendor and stakeholder management, and process design to optimise efficiency and cost.",
   },
   {
-    name: "Ananth Vellal",
-    role: "Marketing & Brand Communication",
-    image: ananth,
-    bio: "Advertising professional with an MBA and 20+ years of work experience planning and implementing brand communication strategies across FMCG, IT/ITES, Automobile and Real Estate. Leads new business initiatives at Empirical Media.",
-  },
-  {
     name: "Arvind Kumar",
     role: "Partnerships & Business Relations",
     image: arvind,
@@ -82,7 +75,7 @@ function TeamPage() {
         </section>
 
         <section className="py-16">
-          <div className="mx-auto max-w-7xl px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mx-auto max-w-4xl px-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {team.map((m) => (
               <article
                 key={m.name}
