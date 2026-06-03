@@ -60,16 +60,17 @@ function TeamPage() {
       <main>
         <section className="relative pt-40 pb-16 noise">
           <div className="absolute inset-0 grid-bg opacity-50" />
-          <div className="relative mx-auto max-w-5xl px-6">
+          <div className="relative mx-auto max-w-5xl px-6 text-center">
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">// Our Team</span>
             <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
               Driven by Data.
               <br />
               <span className="text-gradient">Defined by Expertise.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+            <p className="mt-6 mx-auto max-w-2xl text-lg text-muted-foreground">
               Empirical Media is powered by a multidisciplinary team of strategists, media analysts, digital experts, and commerce planners. Our leadership brings over 20 years of experience in media planning, audit, and brand consulting across India's fastest-growing consumer categories. We believe in collaboration, innovation, and integrity — blending analytical precision with creative strategy to help brands grow smarter.
             </p>
+
 
           </div>
         </section>
