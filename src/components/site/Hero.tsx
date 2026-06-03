@@ -37,7 +37,9 @@ export default function Hero() {
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Empirical Media has spent over a decade building trust, transparency, and measurable impact in India's television advertising ecosystem. Today, we are redefining what a media agency can be — evolving into a Full-Funnel Marketing Intelligence Partner that unites Linear TV, Connected TV (CTV), Digital, and Commerce into one seamless performance framework.
             </p>
-            <p className="italic text-foreground/80 whitespace-nowrap text-xl">Empirical Media makes every impression count.</p>
+            <p className="mt-2 font-display text-2xl md:text-3xl font-bold tracking-tight text-gradient">
+              Empirical Media makes every impression count.
+            </p>
           </div>
 
 
