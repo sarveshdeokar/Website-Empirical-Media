@@ -14,7 +14,7 @@ export default function Process() {
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tighter">
               One funnel. <span className="text-gradient">Every screen.</span>
             </h2>
-            <p className="mt-6 text-muted-foreground max-w-md">
+            <p className="mt-6 text-lg text-muted-foreground max-w-md">
               We unite broadcast scale with digital precision — so every impression
               created upstream can be measured against revenue downstream.
             </p>
