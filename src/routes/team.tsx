@@ -60,7 +60,7 @@ function TeamPage() {
       <main>
         <section className="relative pt-40 pb-16 noise">
           <div className="absolute inset-0 grid-bg opacity-50" />
-          <div className="relative mx-auto max-w-7xl px-6">
+          <div className="relative mx-auto max-w-5xl px-6">
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">// Our Team</span>
             <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
               Driven by Data.
