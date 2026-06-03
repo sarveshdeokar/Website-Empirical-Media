@@ -44,7 +44,7 @@ export default function Nav() {
               rel="noopener noreferrer"
               className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-8 py-4 text-xl font-medium hover:shadow-[var(--shadow-glow)] transition"
             >
-              <Calendar size={18} />
+              <Calendar size={24} />
               Book a meeting
             </a>
             <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground">
