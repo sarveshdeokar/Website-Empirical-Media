@@ -22,7 +22,7 @@ export default function Nav() {
           <Link to="/" className="flex items-center gap-2.5">
             <img src={logo} alt="Empirical Media" className="h-14 w-auto" />
           </Link>
-            <ul className="hidden lg:flex items-center gap-1 text-sm uppercase tracking-widest">
+            <ul className="hidden lg:flex items-center gap-1 text-base uppercase tracking-widest">
             {links.map((l) => (
               <li key={l.to}>
                 <Link

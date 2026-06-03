@@ -15,7 +15,7 @@ export default function ServicesGrid() {
               Insight-driven. <span className="text-gradient">Integrated.</span>
             </h2>
           </div>
-          <Link to="/services" className="font-mono text-sm hover:text-primary inline-flex items-center gap-2">
+          <Link to="/services" className="font-mono text-base hover:text-primary inline-flex items-center gap-2">
             All services <ArrowUpRight size={16} />
           </Link>
         </div>
