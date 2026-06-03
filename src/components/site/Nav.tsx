@@ -1,8 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
-import { Menu, X, Calendar } from "lucide-react";
-import { BOOKING_URL } from "@/lib/booking";
+import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
 const links = [
