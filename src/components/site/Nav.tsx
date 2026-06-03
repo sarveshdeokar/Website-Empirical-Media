@@ -48,7 +48,7 @@ export default function Nav() {
               Book a meeting
             </a>
             <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground">
-              {open ? <X size={20} /> : <Menu size={20} />}
+              {open ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </nav>
