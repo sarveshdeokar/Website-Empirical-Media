@@ -56,19 +56,40 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-5 gap-px bg-border rounded-2xl overflow-hidden glass">
-          {[
-            ["2018", "Founded"],
-            ["21+", "Brand partners"],
-            ["1000+", "Projects Delivered"],
-            ["4x", "Avg ROAS lift"],
-            ["5", "South India states"],
-          ].map(([k, v]) => (
-            <div key={k} className="bg-card p-6">
-              <div className="font-display text-3xl md:text-4xl font-bold text-gradient">{k}</div>
-              <div className="mt-1 text-xs font-mono uppercase tracking-widest text-muted-foreground">{v}</div>
-            </div>
-          ))}
+        <div className="mt-20">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {[
+                ["2018", "Founded"],
+                ["21+", "Brand partners"],
+                ["1000+", "Projects Delivered"],
+                ["4x", "Avg ROAS lift"],
+                ["5", "South India states"],
+              ].map(([k, v]) => (
+                <CarouselItem
+                  key={k}
+                  className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/3"
+                >
+                  <div className="glass rounded-2xl p-8 text-center h-full flex flex-col justify-center gap-2">
+                    <div className="font-display text-4xl md:text-5xl font-bold text-gradient">
+                      {k}
+                    </div>
+                    <div className="text-sm uppercase tracking-widest text-muted-foreground">
+                      {v}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 -translate-x-1/2" />
+            <CarouselNext className="right-0 translate-x-1/2" />
+          </Carousel>
         </div>
       </div>
     </section>
