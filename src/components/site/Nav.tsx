@@ -70,7 +70,7 @@ export default function Nav() {
               rel="noopener noreferrer"
               className="mt-2 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-xl font-medium"
             >
-              <Calendar size={15} />
+              <Calendar size={20} />
               Book a meeting
             </a>
           </div>
