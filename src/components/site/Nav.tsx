@@ -22,7 +22,7 @@ export default function Nav() {
           <Link to="/" className="flex items-center gap-2.5">
             <img src={logo} alt="Empirical Media" className="h-14 w-auto" />
           </Link>
-            <ul className="hidden lg:flex items-center gap-4 text-base uppercase tracking-widest">
+            <ul className="hidden lg:flex items-center gap-4 text-2xl uppercase tracking-widest">
             {links.map((l) => (
               <li key={l.to}>
                 <Link
@@ -42,13 +42,13 @@ export default function Nav() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-6 py-3 text-base font-medium hover:shadow-[var(--shadow-glow)] transition"
+              className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-8 py-4 text-xl font-medium hover:shadow-[var(--shadow-glow)] transition"
             >
-              <Calendar size={18} />
+              <Calendar size={24} />
               Book a meeting
             </a>
             <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground">
-              {open ? <X size={20} /> : <Menu size={20} />}
+              {open ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </nav>
@@ -59,7 +59,7 @@ export default function Nav() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="block px-3 py-2 rounded-lg text-sm hover:bg-muted"
+                className="block px-3 py-2 rounded-lg text-xl hover:bg-muted"
               >
                 {l.label}
               </Link>
@@ -68,9 +68,9 @@ export default function Nav() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-medium"
+              className="mt-2 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-xl font-medium"
             >
-              <Calendar size={15} />
+              <Calendar size={20} />
               Book a meeting
             </a>
           </div>
