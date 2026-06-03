@@ -8,7 +8,7 @@ export default function ServicesGrid() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-end justify-between mb-16 gap-6 flex-wrap">
           <div className="max-w-2xl">
-            <span className="font-mono text-xs uppercase tracking-widest text-primary">// What we do</span>
+            <span className="font-mono text-base md:text-lg uppercase tracking-widest text-primary">// What we do</span>
             <h2 className="mt-3 font-display text-4xl md:text-6xl font-bold tracking-tighter">
               Independent.
               <br />

@@ -40,7 +40,7 @@ export default function LogoIntro() {
           className="h-32 md:h-48 w-auto animate-logo-reveal drop-shadow-2xl"
         />
         <div
-          className="font-mono text-xs uppercase tracking-[0.4em] text-muted-foreground opacity-0 animate-fade-up"
+          className="font-mono text-base md:text-lg uppercase tracking-[0.4em] text-muted-foreground opacity-0 animate-fade-up"
           style={{ animationDelay: "0.6s" }}
         >
           <span className="text-orange-300">360 Digital</span> Media to Sales

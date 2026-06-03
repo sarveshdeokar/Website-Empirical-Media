@@ -29,7 +29,7 @@ function ContactPage() {
         <section className="relative pt-40 pb-16 noise">
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="relative mx-auto max-w-7xl px-6">
-            <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">// Contact</span>
+            <span className="font-mono text-base md:text-lg uppercase tracking-[0.2em] text-primary">// Contact</span>
             <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
               Ready to scale your
               <br />
@@ -75,7 +75,7 @@ function ContactPage() {
                 <Field label="Phone" name="phone" placeholder="+91 …" />
               </div>
               <div>
-                <label className="font-mono text-xs uppercase tracking-widest text-muted-foreground">What can we help with?</label>
+                <label className="font-mono text-base md:text-lg uppercase tracking-widest text-muted-foreground">What can we help with?</label>
                 <textarea
                   rows={5}
                   placeholder="A line or two about your brand and what you're trying to move."
@@ -160,7 +160,7 @@ function PortfolioDownload() {
                style={{ background: "radial-gradient(circle, var(--primary), transparent 70%)" }} />
           <div className="relative grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
             <div>
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">// Portfolio</span>
+              <span className="font-mono text-base md:text-lg uppercase tracking-[0.2em] text-primary">// Portfolio</span>
               <h2 className="mt-3 font-display text-3xl md:text-5xl font-bold tracking-tighter">
                 Download our work deck.
               </h2>
@@ -171,7 +171,7 @@ function PortfolioDownload() {
               </p>
             </div>
             <form onSubmit={handleSubmit} className="glass rounded-2xl p-6 space-y-4">
-              <label className="font-mono text-xs uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+              <label className="font-mono text-base md:text-lg uppercase tracking-widest text-muted-foreground flex items-center gap-2">
                 <Lock size={14} /> Access password
               </label>
               <input
@@ -207,7 +207,7 @@ function PortfolioDownload() {
 function Field({ label, name, type = "text", placeholder }: { label: string; name: string; type?: string; placeholder?: string }) {
   return (
     <div>
-      <label className="font-mono text-xs uppercase tracking-widest text-muted-foreground">{label}</label>
+      <label className="font-mono text-base md:text-lg uppercase tracking-widest text-muted-foreground">{label}</label>
       <input
         name={name}
         type={type}
@@ -223,7 +223,7 @@ function ContactCard({ icon, label, value, href }: { icon: React.ReactNode; labe
     <div className="bg-card p-6 flex gap-4 items-start hover:bg-surface-elevated transition">
       <div className="rounded-xl bg-primary/10 text-primary p-2.5">{icon}</div>
       <div>
-        <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">{label}</div>
+        <div className="font-mono text-base md:text-lg uppercase tracking-widest text-muted-foreground">{label}</div>
         <div className="mt-1 font-medium">{value}</div>
       </div>
     </div>

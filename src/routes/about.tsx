@@ -22,7 +22,7 @@ function AboutPage() {
         <section className="relative pt-32 pb-12 noise">
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="relative mx-auto max-w-4xl px-6 text-center">
-            <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">// About Us</span>
+            <span className="font-mono text-base md:text-lg uppercase tracking-[0.2em] text-primary">// About Us</span>
             <h1 className="mt-4 font-display text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95]">
               The Intelligence
               <br />
@@ -45,7 +45,7 @@ function AboutPage() {
         <section className="py-16 border-y border-border">
 
           <div className="mx-auto max-w-6xl px-6 text-center">
-            <span className="font-mono text-xs uppercase tracking-widest text-primary">// Our Differentiator</span>
+            <span className="font-mono text-base md:text-lg uppercase tracking-widest text-primary">// Our Differentiator</span>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tighter">
               Independent. Insight-Driven. <span className="text-gradient">Integrated.</span>
             </h2>
@@ -75,7 +75,7 @@ function AboutPage() {
                 style={{ background: "radial-gradient(circle, var(--primary), transparent 70%)" }}
               />
               <div className="relative">
-                <span className="font-mono text-xs uppercase tracking-widest text-primary">// Data Intelligence Engine</span>
+                <span className="font-mono text-base md:text-lg uppercase tracking-widest text-primary">// Data Intelligence Engine</span>
                 <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tighter">
                   Turning Data into <span className="text-gradient">Marketing Clarity.</span>
                 </h2>
@@ -107,7 +107,7 @@ function AboutPage() {
                 style={{ background: "radial-gradient(circle, var(--secondary), transparent 70%)" }}
               />
               <div className="relative">
-                <span className="font-mono text-xs uppercase tracking-widest text-primary">// Impact Measurement</span>
+                <span className="font-mono text-base md:text-lg uppercase tracking-widest text-primary">// Impact Measurement</span>
                 <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tighter">
                   From Awareness <span className="text-gradient">to Shelf.</span>
                 </h2>
@@ -137,7 +137,7 @@ function AboutPage() {
 
         <section className="py-20 border-t border-border">
           <div className="mx-auto max-w-4xl px-6 text-center">
-            <span className="font-mono text-xs uppercase tracking-widest text-primary">// Vision</span>
+            <span className="font-mono text-base md:text-lg uppercase tracking-widest text-primary">// Vision</span>
             <h2 className="mt-3 font-display text-4xl md:text-6xl font-bold tracking-tighter leading-[0.95]">
               Bridging Broadcast <br/>and <span className="text-gradient">Digital.</span>
             </h2>
