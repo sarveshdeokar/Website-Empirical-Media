@@ -46,12 +46,6 @@ const team: Member[] = [
     bio: "Over 17 years of industry and entrepreneurial experience. Builds operational excellence and manages the finance function, bringing expertise in operations, vendor and stakeholder management, and process design to optimise efficiency and cost.",
   },
   {
-    name: "Ananth Vellal",
-    role: "Marketing & Brand Communication",
-    image: ananth,
-    bio: "Advertising professional with an MBA and 20+ years of work experience planning and implementing brand communication strategies across FMCG, IT/ITES, Automobile and Real Estate. Leads new business initiatives at Empirical Media.",
-  },
-  {
     name: "Arvind Kumar",
     role: "Partnerships & Business Relations",
     image: arvind,
