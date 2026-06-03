@@ -5,7 +5,6 @@ import Footer from "@/components/site/Footer";
 import sandhya from "@/assets/team/sandhya.png";
 import gopala from "@/assets/team/gopala.png";
 import abhiram from "@/assets/team/abhiram.png";
-import ananth from "@/assets/team/ananth.png";
 import arvind from "@/assets/team/arvind.jpg";
 
 export const Route = createFileRoute("/team")({
