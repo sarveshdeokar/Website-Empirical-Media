@@ -18,11 +18,11 @@ export default function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto max-w-7xl px-6 pt-6">
-        <nav className="glass rounded-2xl flex items-center justify-between px-6 py-3.5">
-          <Link to="/" className="flex items-center gap-2.5">
-            <img src={logo} alt="Empirical Media" className="h-20 w-auto" />
+        <nav className="glass rounded-2xl flex items-center justify-between px-4 sm:px-6 py-3.5 gap-3">
+          <Link to="/" className="flex items-center gap-2.5 shrink-0">
+            <img src={logo} alt="Empirical Media" className="h-14 sm:h-20 w-auto" />
           </Link>
-            <ul className="hidden lg:flex items-center gap-4 text-base font-bold uppercase tracking-widest">
+            <ul className="hidden lg:flex items-center gap-6 text-[26px] font-bold uppercase tracking-widest">
             {links.map((l) => (
               <li key={l.to}>
                 <Link
@@ -36,19 +36,19 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             <ThemeToggle />
             <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-6 py-3 text-base font-bold hover:shadow-[var(--shadow-glow)] transition"
+              className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-7 py-3.5 text-[26px] font-bold hover:shadow-[var(--shadow-glow)] transition"
             >
-              <Calendar size={18} />
+              <Calendar size={26} />
               Book a meeting
             </a>
             <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground">
-              {open ? <X size={20} /> : <Menu size={20} />}
+              {open ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </nav>
