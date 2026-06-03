@@ -68,9 +68,7 @@ export default function Hero() {
               {[
                 ["2018", "Founded"],
                 ["21+", "Brand partners"],
-                ["1000+", "Projects Delivered"],
-                ["4x", "Avg ROAS lift"],
-                ["5", "South India states"],
+                ["10000+", "Projects Delivered"],
               ].map(([k, v]) => (
                 <CarouselItem
                   key={k}
