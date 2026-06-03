@@ -44,7 +44,7 @@ export default function Nav() {
           </div>
         </nav>
         {open && (
-          <div className="glass rounded-2xl mt-2 p-4 lg:hidden space-y-1">
+          <div className="mt-2 p-4 lg:hidden space-y-1">
             {links.map((l) => (
               <Link
                 key={l.to}
