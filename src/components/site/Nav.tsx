@@ -37,15 +37,6 @@ export default function Nav() {
           </ul>
           <div className="flex items-center gap-4 shrink-0">
             <ThemeToggle />
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2.5 rounded-xl bg-primary text-primary-foreground px-6 py-3 text-xl font-bold hover:shadow-[var(--shadow-glow)] transition"
-            >
-              <Calendar size={20} />
-              Book a meeting
-            </a>
             <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground">
               {open ? <X size={24} /> : <Menu size={24} />}
             </button>
