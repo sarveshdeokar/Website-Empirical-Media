@@ -9,17 +9,8 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "strategic-consulting",
-    number: "01",
-    title: "Strategic Consulting",
-    tagline: "Where brand ambition meets market reality.",
-    description:
-      "Brand audits, GTM frameworks and category positioning informed by audience truth and category whitespace.",
-    capabilities: ["Brand strategy", "Category positioning", "GTM frameworks", "Audience research"],
-  },
-  {
     slug: "media-planning",
-    number: "02",
+    number: "01",
     title: "Media Planning & Audit",
     tagline: "Every rupee accountable. Every reach measurable.",
     description:
@@ -28,7 +19,7 @@ export const services: Service[] = [
   },
   {
     slug: "digital-marketing",
-    number: "03",
+    number: "02",
     title: "Digital Marketing",
     tagline: "Performance with a point of view.",
     description:
@@ -36,30 +27,39 @@ export const services: Service[] = [
     capabilities: ["Paid social", "Search & SEO", "Programmatic", "Lifecycle & CRM"],
   },
   {
-    slug: "full-stack-marketing",
-    number: "04",
-    title: "Full-Stack Marketing",
+    slug: "marketing-as-a-service",
+    number: "03",
+    title: "Marketing as a Service",
     tagline: "One partner. The entire funnel.",
     description:
       "An integrated marketing engine across strategy, brand, media, content and commerce — operated as a single, accountable stack.",
     capabilities: ["Integrated planning", "Brand & content", "Performance media", "Commerce ops"],
   },
   {
-    slug: "product-design",
-    number: "05",
-    title: "Product Design & Development",
-    tagline: "Digital products that compound brand equity.",
+    slug: "data-visualisation",
+    number: "04",
+    title: "Data Visualisation",
+    tagline: "Make faster decisions backed by visuals.",
     description:
-      "Websites, web apps and storefronts designed and engineered with the same rigour we bring to brand.",
-    capabilities: ["UX & UI design", "Headless web", "Shopify & D2C", "Web apps"],
+      "Make faster decisions backed by visuals and custom dashboards with projections — not just raw numbers.",
+    capabilities: ["Real-time Dashboard", "Category Insights", "Campaign Delivery", "Competitor Studies"],
   },
   {
     slug: "creative-services",
-    number: "06",
+    number: "05",
     title: "Creative Services",
     tagline: "Stories built for the medium.",
     description:
       "TVCs, films, social content and campaign craft made for the channels they will actually live on.",
     capabilities: ["TVCs & films", "Social content", "Campaign craft", "Motion & design"],
+  },
+  {
+    slug: "strategic-consulting",
+    number: "06",
+    title: "Strategic Consulting",
+    tagline: "Where brand ambition meets market reality.",
+    description:
+      "Brand audits, GTM frameworks and category positioning informed by audience truth and category whitespace.",
+    capabilities: ["Brand strategy", "Category positioning", "GTM frameworks", "Audience research"],
   },
 ];

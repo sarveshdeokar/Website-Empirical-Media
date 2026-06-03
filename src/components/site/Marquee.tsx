@@ -51,7 +51,7 @@ export default function Marquee() {
   return (
     <section className="relative py-20 overflow-hidden border-y border-border">
       <div className="mx-auto max-w-7xl px-6 mb-10">
-        <span className="font-mono text-xs uppercase tracking-widest text-primary">// Our Clients</span>
+        <span className="font-mono text-base md:text-lg uppercase tracking-widest text-primary">// Our Clients</span>
         <h2 className="mt-3 font-display text-3xl md:text-5xl font-bold tracking-tighter">
           Building Trust <span className="text-gradient">Across Categories</span>
         </h2>

@@ -24,7 +24,7 @@ function ServicesPage() {
         <section className="relative pt-40 pb-20 noise">
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="relative mx-auto max-w-7xl px-6">
-            <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">// Services</span>
+            <span className="font-mono text-base md:text-lg uppercase tracking-[0.2em] text-primary">// Services</span>
             <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
               Eight verticals.
               <br />
@@ -53,7 +53,7 @@ function ServicesPage() {
                   <p className="text-muted-foreground leading-relaxed">{s.description}</p>
                   <ul className="mt-5 flex flex-wrap gap-2">
                     {s.capabilities.map((c) => (
-                      <li key={c} className="font-mono text-xs uppercase tracking-wider px-3 py-1.5 rounded-full border border-border text-muted-foreground">
+                      <li key={c} className="font-mono text-base md:text-lg uppercase tracking-wider px-3 py-1.5 rounded-full border border-border text-muted-foreground">
                         {c}
                       </li>
                     ))}

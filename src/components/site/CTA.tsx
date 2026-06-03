@@ -12,7 +12,7 @@ export default function CTA() {
             style={{ background: "radial-gradient(circle, var(--primary), transparent 70%)" }}
           />
           <div className="relative max-w-3xl">
-            <span className="font-mono text-xs uppercase tracking-widest text-primary">// Contact Us</span>
+            <span className="font-mono text-base md:text-lg uppercase tracking-widest text-primary">// Contact Us</span>
             <h2 className="mt-3 font-display text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95]">
               Let's turn your campaigns into
               <br />

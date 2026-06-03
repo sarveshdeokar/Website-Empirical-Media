@@ -10,7 +10,7 @@ export default function Process() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-12">
           <div>
-            <span className="font-mono text-xs uppercase tracking-widest text-primary">// The Full-Funnel Framework</span>
+            <span className="font-mono text-base md:text-lg uppercase tracking-widest text-primary">// The Full-Funnel Framework</span>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold tracking-tighter">
               One funnel. <span className="text-gradient">Every screen.</span>
             </h2>
