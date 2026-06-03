@@ -26,7 +26,7 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-6 w-full">
 
-        <h1 className="font-sans sm:text-5xl lg:text-[6.5rem] font-bold leading-[0.95] tracking-tighter text-2xl">
+        <h1 className="font-sans sm:text-[2.1rem] lg:text-[4.55rem] font-bold leading-[0.95] tracking-tighter text-[1.05rem]">
           <span className="text-gradient">From TV Advertising</span>
           <br />
           to Total Marketing<br />Intelligence
