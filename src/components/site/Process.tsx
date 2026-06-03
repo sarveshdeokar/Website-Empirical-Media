@@ -1,8 +1,7 @@
 const steps = [
-  { k: "01", t: "Top Funnel — Linear TV", d: "BARC-led TV planning and audit. Optimise GRPs, frequency and cost-per-reach across languages and states. Where brand stories begin." },
-  { k: "02", t: "Mid Funnel — Connected TV", d: "Cross-platform modeling that fuses BARC and CTV datasets — removing duplication, surfacing incremental, digital-first audiences." },
+  { k: "01", t: "Top Funnel — Linear TV", d: "DATA-Led TV planning and audit. Optimise GRPs, frequency and cost-per-reach across languages and states. Where brand stories begin." },
+  { k: "02", t: "Mid Funnel — Connected TV", d: "Cross-platform modeling that fuses Linear TV datasets — removing duplication, surfacing incremental, digital-first audiences." },
   { k: "03", t: "Lower Funnel — Digital & Commerce", d: "Mapping exposure to Google, Meta, YouTube and marketplaces (Amazon, Flipkart, Blinkit, Tata 1mg). From clicks to carts to customers." },
-  { k: "04", t: "Loop — Audit & Attribution", d: "Geo-mapping, MMM and retail correlation close the loop between media spend and measurable shelf movement." },
 ];
 
 export default function Process() {
