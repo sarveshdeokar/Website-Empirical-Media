@@ -1,6 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Calendar } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function Hero() {
   return (
