@@ -25,7 +25,7 @@ export default function Process() {
                 <span className="font-mono text-sm text-primary">{s.k}</span>
                 <div>
                   <h3 className="font-display text-2xl font-semibold">{s.t}</h3>
-                  <p className="mt-2 text-muted-foreground max-w-lg">{s.d}</p>
+                  <p className="mt-2 text-lg text-muted-foreground max-w-lg">{s.d}</p>
                 </div>
               </div>
             ))}
