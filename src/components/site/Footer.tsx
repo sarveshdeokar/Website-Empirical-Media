@@ -33,7 +33,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row justify-between gap-3 text-xs font-mono text-muted-foreground">
+        <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row justify-between gap-3 text-lg font-mono text-muted-foreground">
           <span>© {new Date().getFullYear()} Empirical Media Pvt. Ltd.</span>
           <span>Bengaluru · India · Worldwide</span>
         </div>
