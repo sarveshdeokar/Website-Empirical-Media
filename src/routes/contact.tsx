@@ -17,8 +17,7 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
-const PORTFOLIO_PASSWORD = "123456";
-const PORTFOLIO_URL = "/empirical-media-portfolio.pdf";
+const PORTFOLIO_ENDPOINT = "/api/portfolio";
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -134,21 +133,42 @@ function PortfolioDownload() {
   const [pw, setPw] = useState("");
   const [unlocked, setUnlocked] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (pw.trim() === PORTFOLIO_PASSWORD) {
-      setUnlocked(true);
-      setError("");
-      // trigger download
+    if (loading) return;
+    setError("");
+    setLoading(true);
+    try {
+      const res = await fetch(PORTFOLIO_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: pw.trim() }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({ error: "" }));
+        setError(
+          data?.error ||
+            "Incorrect password. Please try again or request access.",
+        );
+        setUnlocked(false);
+        return;
+      }
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
-      a.href = PORTFOLIO_URL;
+      a.href = url;
       a.download = "Empirical-Media-Portfolio.pdf";
       document.body.appendChild(a);
       a.click();
       a.remove();
-    } else {
-      setError("Incorrect password. Please try again or request access.");
+      URL.revokeObjectURL(url);
+      setUnlocked(true);
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -179,22 +199,22 @@ function PortfolioDownload() {
                 value={pw}
                 onChange={(e) => setPw(e.target.value)}
                 placeholder="Enter password"
-                maxLength={64}
+                maxLength={128}
                 className="w-full rounded-xl bg-background border border-border p-4 outline-none focus:border-primary transition"
               />
               {error && <p className="text-sm text-destructive">{error}</p>}
-              {unlocked && (
+              {unlocked && !error && (
                 <p className="text-sm text-primary">
-                  Unlocked — your download has started.{" "}
-                  <a href={PORTFOLIO_URL} download className="underline">Click here if it didn't.</a>
+                  Unlocked — your download has started.
                 </p>
               )}
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground px-5 py-3.5 font-medium hover:shadow-[var(--shadow-glow)] transition"
+                disabled={loading || pw.trim().length === 0}
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground px-5 py-3.5 font-medium hover:shadow-[var(--shadow-glow)] transition disabled:opacity-60"
               >
                 <Download size={18} />
-                {unlocked ? "Download again" : "Unlock & download"}
+                {loading ? "Verifying…" : unlocked ? "Download again" : "Unlock & download"}
               </button>
             </form>
           </div>
