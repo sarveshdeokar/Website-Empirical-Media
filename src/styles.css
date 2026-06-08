@@ -99,7 +99,7 @@
   --background: oklch(0.99 0.003 80);
   --foreground: #000000;
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 260);
+  --card-foreground: #000000;
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.02 260);
   --primary: #EA5A59;          /* matches logo red 1:1 */
