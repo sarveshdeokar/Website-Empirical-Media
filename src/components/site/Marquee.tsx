@@ -49,21 +49,21 @@ const clients: Client[] = [
 export default function Marquee() {
   const loop = [...clients, ...clients];
   return (
-    <section className="relative py-20 overflow-hidden border-y border-border">
-      <div className="mx-auto max-w-7xl px-6 mb-10">
-        <span className="font-mono text-base md:text-lg uppercase tracking-widest text-primary">// Our Clients</span>
-        <h2 className="mt-3 font-display text-3xl md:text-5xl font-bold tracking-tighter">
+    <section className="relative py-14 sm:py-20 overflow-hidden border-y border-border">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 mb-8 sm:mb-10">
+        <span className="font-mono text-sm md:text-lg uppercase tracking-widest text-primary">// Our Clients</span>
+        <h2 className="mt-3 font-display text-2xl sm:text-3xl md:text-5xl font-bold tracking-tighter">
           Building Trust <span className="text-gradient">Across Categories</span>
         </h2>
-        <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
+        <p className="mt-3 sm:mt-4 max-w-3xl text-sm sm:text-base md:text-lg text-muted-foreground">
           Empirical Media partners with leading brands across FMCG, Personal Care, Retail, E-Commerce, Hospitality, and Wellness. From emerging startups to established national advertisers, our clients value one thing above all — transparency and measurable results. We serve clients in Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Kerala and Maharashtra — bringing regional expertise and local market insights that drive superior campaign outcomes.
         </p>
       </div>
 
       <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
-        <div className="flex gap-8 animate-marquee w-max items-center">
+        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-background to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-background to-transparent z-10" />
+        <div className="flex gap-5 sm:gap-8 animate-marquee w-max items-center">
           {loop.map((c, i) => (
             <a
               key={c.name + i}
@@ -72,13 +72,13 @@ export default function Marquee() {
               rel="noopener noreferrer"
               title={c.name}
               aria-label={`Visit ${c.name}`}
-              className="group h-36 w-60 flex items-center justify-center shrink-0 rounded-2xl bg-white border border-black/5 px-6 py-4 shadow-[0_2px_10px_-2px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 transition-all"
+              className="group h-24 w-40 sm:h-36 sm:w-60 flex items-center justify-center shrink-0 rounded-2xl bg-white border border-black/5 px-4 sm:px-6 py-3 sm:py-4 shadow-[0_2px_10px_-2px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 transition-all"
             >
               <img
                 src={c.src}
                 alt={c.name}
                 loading="lazy"
-                className="max-h-28 max-w-full object-contain opacity-95 group-hover:opacity-100 transition"
+                className="max-h-16 sm:max-h-28 max-w-full object-contain opacity-95 group-hover:opacity-100 transition"
               />
             </a>
           ))}
