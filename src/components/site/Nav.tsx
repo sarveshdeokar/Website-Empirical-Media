@@ -24,55 +24,75 @@ export default function Nav() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-transparent"
-      }`}
-    >
-      <div className={`mx-auto max-w-7xl px-3 sm:px-6 transition-all duration-300 ${scrolled ? "pt-2" : "pt-3 sm:pt-6"}`}>
-        <nav className="grid grid-cols-[auto_1fr_auto] items-center px-2 sm:px-6 py-2 sm:py-3 gap-2 sm:gap-3">
-          <Link to="/" className="flex items-center shrink-0 py-1 sm:py-2">
-            <img src={logo} alt="Empirical Media" className={`w-auto transition-all duration-300 ${scrolled ? "h-9 sm:h-14" : "h-10 sm:h-20"}`} />
+    <>
+      {/* Mobile nav — simple, solid, no animations */}
+      <header className="lg:hidden fixed top-0 inset-x-0 z-50 bg-background border-b border-border">
+        <nav className="flex items-center justify-between px-4 py-3">
+          <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+            <img src={logo} alt="Empirical Media" className="h-9 w-auto" />
           </Link>
-          <ul className="hidden lg:flex items-center justify-center gap-6 text-xl font-bold uppercase tracking-widest">
-            {links.map((l) => (
-              <li key={l.to}>
-                <Link
-                  to={l.to}
-                  className="px-4 py-2 text-white hover:text-primary transition-colors"
-                  activeProps={{ className: "px-4 py-2 text-primary" }}
-                  activeOptions={{ exact: l.to === "/" }}
-                >
-                  {l.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <div className="flex items-center gap-4 shrink-0">
+          <div className="flex items-center gap-2">
             <ThemeToggle />
-            <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-white">
+            <button
+              onClick={() => setOpen(!open)}
+              aria-label={open ? "Close menu" : "Open menu"}
+              className="p-2 text-foreground"
+            >
               {open ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </nav>
         {open && (
-          <div className="mt-2 p-4 lg:hidden space-y-1">
+          <div className="border-t border-border bg-background px-2 py-2">
             {links.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="block px-3 py-3 rounded-lg text-base font-bold uppercase tracking-widest text-white hover:text-primary"
+                className="block px-4 py-3 rounded-md text-base font-bold uppercase tracking-widest text-foreground hover:bg-muted"
+                activeProps={{ className: "block px-4 py-3 rounded-md text-base font-bold uppercase tracking-widest text-primary bg-muted" }}
+                activeOptions={{ exact: l.to === "/" }}
               >
                 {l.label}
               </Link>
             ))}
           </div>
         )}
-      </div>
-    </header>
+      </header>
+
+      {/* Desktop nav — original transparent-to-solid on scroll */}
+      <header
+        className={`hidden lg:block fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm"
+            : "bg-transparent"
+        }`}
+      >
+        <div className={`mx-auto max-w-7xl px-6 transition-all duration-300 ${scrolled ? "pt-2" : "pt-6"}`}>
+          <nav className="grid grid-cols-[auto_1fr_auto] items-center px-6 py-3 gap-3">
+            <Link to="/" className="flex items-center shrink-0 py-2">
+              <img src={logo} alt="Empirical Media" className={`w-auto transition-all duration-300 ${scrolled ? "h-14" : "h-20"}`} />
+            </Link>
+            <ul className="flex items-center justify-center gap-6 text-xl font-bold uppercase tracking-widest">
+              {links.map((l) => (
+                <li key={l.to}>
+                  <Link
+                    to={l.to}
+                    className="px-4 py-2 text-white hover:text-primary transition-colors"
+                    activeProps={{ className: "px-4 py-2 text-primary" }}
+                    activeOptions={{ exact: l.to === "/" }}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="flex items-center gap-4 shrink-0">
+              <ThemeToggle />
+            </div>
+          </nav>
+        </div>
+      </header>
+    </>
   );
 }
