@@ -26,7 +26,7 @@ export default function Nav() {
   return (
     <>
       {/* Mobile nav — simple, solid, no animations */}
-      <header className="lg:hidden fixed top-0 inset-x-0 z-50 bg-background border-b border-border">
+      <header className="lg:hidden fixed top-0 inset-x-0 z-50 bg-background border-b border-border shadow-sm">
         <nav className="flex items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
             <img src={logo} alt="Empirical Media" className="h-9 w-auto" />
