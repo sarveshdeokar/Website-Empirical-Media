@@ -30,9 +30,9 @@ function ContactPage() {
           <div className="relative mx-auto max-w-7xl px-6">
             <span className="font-mono text-base md:text-lg uppercase tracking-[0.2em] text-primary">// Contact</span>
             <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
-              Built for scale.
+              Strategy that scales.
               <br />
-              <span className="text-gradient">Engineered for intelligence.</span>
+              <span className="text-gradient">Execution that delivers.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
               Move beyond traditional media buying. Let's engineer a custom performance framework that turns your data into definitive growth.
