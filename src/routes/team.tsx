@@ -62,7 +62,7 @@ function TeamPage() {
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="relative mx-auto max-w-5xl px-5 sm:px-6 text-center">
             <span className="font-mono text-sm md:text-lg uppercase tracking-[0.2em] text-primary">// Our Team</span>
-            <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-8xl font-bold tracking-tighter leading-[1] sm:leading-[0.95]">
+            <h1 className="mt-4 font-display text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter leading-[1] sm:leading-[0.95]">
               Driven by Data.
               <br />
               <span className="text-gradient">Defined by Expertise.</span>
