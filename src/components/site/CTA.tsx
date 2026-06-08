@@ -13,7 +13,7 @@ export default function CTA() {
           />
           <div className="relative max-w-3xl">
             <span className="font-mono text-sm md:text-lg uppercase tracking-widest text-primary">// Contact Us</span>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter leading-[1.05] sm:leading-[0.95]">
+            <h2 className="mt-3 font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter leading-[1.05] sm:leading-[0.95]">
               Let's turn your campaigns into
               <br />
               <span className="text-gradient">measurable growth stories.</span>
