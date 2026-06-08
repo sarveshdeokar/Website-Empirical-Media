@@ -65,7 +65,7 @@ export default function Nav() {
         className={`hidden lg:block fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled
             ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm"
-            : "bg-transparent"
+            : "bg-transparent border-b border-white/10 dark:border-white/10"
         }`}
       >
         <div className={`mx-auto max-w-7xl px-6 transition-all duration-300 ${scrolled ? "pt-2" : "pt-6"}`}>
@@ -78,7 +78,7 @@ export default function Nav() {
                 <li key={l.to}>
                   <Link
                     to={l.to}
-                    className="px-4 py-2 text-white hover:text-primary transition-colors"
+                    className={`px-4 py-2 hover:text-primary transition-colors ${scrolled ? "text-foreground" : "text-white"}`}
                     activeProps={{ className: "px-4 py-2 text-primary" }}
                     activeOptions={{ exact: l.to === "/" }}
                   >
@@ -93,6 +93,7 @@ export default function Nav() {
           </nav>
         </div>
       </header>
+
     </>
   );
 }
