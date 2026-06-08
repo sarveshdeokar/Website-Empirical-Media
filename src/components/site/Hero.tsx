@@ -9,7 +9,7 @@ import {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-44 pb-20 overflow-hidden noise">
+    <section className="relative min-h-screen flex items-center pt-28 sm:pt-36 lg:pt-44 pb-16 sm:pb-20 overflow-hidden noise">
       <div className="absolute inset-0 grid-bg animate-grid opacity-60 pointer-events-none" />
       <div
         className="absolute inset-0 pointer-events-none"
@@ -24,20 +24,20 @@ export default function Hero() {
         style={{ background: "radial-gradient(circle, var(--primary), transparent 70%)" }}
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 w-full">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 w-full">
 
-        <h1 className="font-sans sm:text-[2.1rem] lg:text-[4.55rem] font-bold leading-[0.95] tracking-tighter text-[1.05rem]">
+        <h1 className="font-sans text-[2rem] sm:text-[2.6rem] md:text-5xl lg:text-[4.55rem] font-bold leading-[1.05] sm:leading-[0.95] tracking-tighter">
           <span className="text-gradient">From TV Advertising</span>
           <br />
-          to Total Marketing<br />Intelligence
+          to Total Marketing<br className="hidden sm:block" /> Intelligence
         </h1>
 
-        <div className="mt-10 grid md:grid-cols-2 gap-10 items-end">
+        <div className="mt-8 sm:mt-10 grid md:grid-cols-2 gap-8 md:gap-10 items-end">
           <div className="max-w-xl space-y-4">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
               Empirical Media has spent over a decade building trust, transparency, and measurable impact in India's television advertising ecosystem. Today, we are redefining what a media agency can be — evolving into a Full-Funnel Marketing Intelligence Partner that unites Linear TV, Connected TV (CTV), Digital, and Commerce into one seamless performance framework.
             </p>
-            <p className="mt-2 font-display text-2xl md:text-3xl font-bold tracking-tight text-gradient">
+            <p className="mt-2 font-display text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-gradient">
               Empirical Media makes every impression count.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function Hero() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-2xl bg-[#EA5A59] px-6 py-4 font-semibold text-white transition hover:bg-[#d44b4a]"
+              className="inline-flex items-center gap-2 rounded-2xl bg-[#EA5A59] px-5 sm:px-6 py-3.5 sm:py-4 text-sm sm:text-base font-semibold text-white transition hover:bg-[#d44b4a]"
             >
               <Calendar size={18} />
               Book a meeting
@@ -56,7 +56,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-12 sm:mt-20">
           <Carousel
             opts={{
               align: "start",
@@ -72,13 +72,13 @@ export default function Hero() {
               ].map(([k, v]) => (
                 <CarouselItem
                   key={k}
-                  className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/3"
+                  className="pl-4 basis-3/4 sm:basis-1/2 md:basis-1/3 lg:basis-1/3"
                 >
-                  <div className="glass rounded-2xl p-8 text-center h-full flex flex-col justify-center gap-2">
-                    <div className="font-display text-4xl md:text-5xl font-bold text-gradient">
+                  <div className="glass rounded-2xl p-6 sm:p-8 text-center h-full flex flex-col justify-center gap-2">
+                    <div className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gradient">
                       {k}
                     </div>
-                    <div className="text-sm uppercase tracking-widest text-muted-foreground">
+                    <div className="text-xs sm:text-sm uppercase tracking-widest text-muted-foreground">
                       {v}
                     </div>
                   </div>
