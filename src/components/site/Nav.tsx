@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "@/assets/logo.png";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
@@ -14,12 +14,27 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 inset-x-0 z-50">
-      <div className="mx-auto max-w-7xl px-6 pt-6">
+    <header
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm"
+          : "bg-transparent"
+      }`}
+    >
+      <div className={`mx-auto max-w-7xl px-6 transition-all duration-300 ${scrolled ? "pt-2" : "pt-6"}`}>
         <nav className="grid grid-cols-[auto_1fr_auto] items-center px-4 sm:px-6 py-3 gap-3">
           <Link to="/" className="flex items-center shrink-0 py-2">
-            <img src={logo} alt="Empirical Media" className="h-14 sm:h-20 w-auto" />
+            <img src={logo} alt="Empirical Media" className={`w-auto transition-all duration-300 ${scrolled ? "h-12 sm:h-14" : "h-14 sm:h-20"}`} />
           </Link>
           <ul className="hidden lg:flex items-center justify-center gap-6 text-xl font-bold uppercase tracking-widest">
             {links.map((l) => (
@@ -38,7 +53,7 @@ export default function Nav() {
 
           <div className="flex items-center gap-4 shrink-0">
             <ThemeToggle />
-            <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground">
+            <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-white">
               {open ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -50,7 +65,7 @@ export default function Nav() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="block px-3 py-3 rounded-lg text-base font-bold uppercase tracking-widest hover:bg-muted"
+                className="block px-3 py-3 rounded-lg text-base font-bold uppercase tracking-widest text-white hover:text-primary"
               >
                 {l.label}
               </Link>
