@@ -31,6 +31,9 @@ export default function Nav() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50">
+      <div className="absolute right-6 top-6 z-50">
+        <ThemeToggle />
+      </div>
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <nav className="grid grid-cols-[auto_1fr_auto] items-center px-4 sm:px-6 py-3 gap-3">
           <div
@@ -83,8 +86,7 @@ export default function Nav() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-4 shrink-0">
-            <ThemeToggle />
+          <div className="flex items-center gap-4 shrink-0 justify-self-end">
             <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden p-2 text-foreground">
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
