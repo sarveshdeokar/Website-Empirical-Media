@@ -11,7 +11,7 @@ export default function Process() {
         <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-12">
           <div>
             <span className="font-mono text-sm md:text-lg uppercase tracking-widest text-primary">// The Full-Funnel Framework</span>
-            <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-5xl font-bold tracking-tighter">
               One funnel. <span className="text-gradient">Every screen.</span>
             </h2>
             <p className="mt-5 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-md">
@@ -24,7 +24,7 @@ export default function Process() {
               <div key={s.k} className="bg-card p-5 sm:p-8 grid grid-cols-[auto_1fr] gap-4 sm:gap-8 items-start hover:bg-surface-elevated transition">
                 <span className="font-mono text-sm text-primary">{s.k}</span>
                 <div>
-                  <h3 className="font-display text-lg sm:text-2xl font-semibold">{s.t}</h3>
+                  <h3 className="font-display text-xl sm:text-2xl font-semibold">{s.t}</h3>
                   <p className="mt-2 text-sm sm:text-base lg:text-lg text-muted-foreground max-w-lg">{s.d}</p>
                 </div>
               </div>

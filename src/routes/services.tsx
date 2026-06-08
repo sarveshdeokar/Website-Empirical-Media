@@ -25,7 +25,7 @@ function ServicesPage() {
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="relative mx-auto max-w-7xl px-5 sm:px-6">
             <span className="font-mono text-sm md:text-lg uppercase tracking-[0.2em] text-primary">// Services</span>
-            <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-8xl font-bold tracking-tighter leading-[1] sm:leading-[0.95]">
+            <h1 className="mt-4 font-display text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter leading-[1] sm:leading-[0.95]">
               Eight verticals.
               <br />
               <span className="text-gradient">One studio.</span>
@@ -46,14 +46,14 @@ function ServicesPage() {
               >
                 <span className="font-mono text-sm text-primary">{s.number}</span>
                 <div>
-                  <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">{s.title}</h2>
-                  <p className="mt-2 sm:mt-3 text-primary/90 font-medium text-sm sm:text-base">{s.tagline}</p>
+                  <h2 className="font-display text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight">{s.title}</h2>
+                  <p className="mt-2 sm:mt-3 text-primary/90 font-medium text-base sm:text-lg">{s.tagline}</p>
                 </div>
                 <div>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{s.description}</p>
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">{s.description}</p>
                   <ul className="mt-4 sm:mt-5 flex flex-wrap gap-2">
                     {s.capabilities.map((c) => (
-                      <li key={c} className="font-mono text-xs sm:text-sm md:text-base uppercase tracking-wider px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-border text-muted-foreground">
+                      <li key={c} className="font-mono text-sm sm:text-base md:text-base uppercase tracking-wider px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-border text-muted-foreground">
                         {c}
                       </li>
                     ))}

@@ -23,7 +23,7 @@ function AboutPage() {
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="relative mx-auto max-w-4xl px-5 sm:px-6 text-center">
             <span className="font-mono text-sm md:text-lg uppercase tracking-[0.2em] text-primary">// About Us</span>
-            <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter leading-[1.05] sm:leading-[0.95]">
+            <h1 className="mt-4 font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter leading-[1.05] sm:leading-[0.95]">
               The Intelligence
               <br />
               Behind <span className="text-gradient">Every Campaign.</span>
@@ -46,7 +46,7 @@ function AboutPage() {
 
           <div className="mx-auto max-w-6xl px-5 sm:px-6 text-center">
             <span className="font-mono text-sm md:text-lg uppercase tracking-widest text-primary">// Our Differentiator</span>
-            <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-5xl font-bold tracking-tighter">
               Independent. Insight-Driven. <span className="text-gradient">Integrated.</span>
             </h2>
 
@@ -58,7 +58,7 @@ function AboutPage() {
                 ["Audit Integrity", "As an independent auditor, Empirical ensures your campaigns are accountable, efficient, and transparent."],
               ].map(([t, d]) => (
                 <div key={t} className="bg-card p-6 sm:p-8 md:p-10 text-left">
-                  <h3 className="font-display text-xl sm:text-2xl font-semibold text-gradient">{t}</h3>
+                  <h3 className="font-display text-2xl sm:text-2xl font-semibold text-gradient">{t}</h3>
                   <p className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground">{d}</p>
                 </div>
               ))}
@@ -76,7 +76,7 @@ function AboutPage() {
               />
               <div className="relative">
                 <span className="font-mono text-sm md:text-lg uppercase tracking-widest text-primary">// Data Intelligence Engine</span>
-                <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">
+                <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-5xl font-bold tracking-tighter">
                   Turning Data into <span className="text-gradient">Marketing Clarity.</span>
                 </h2>
                 <p className="mt-5 sm:mt-6 text-sm sm:text-base text-muted-foreground">
@@ -108,7 +108,7 @@ function AboutPage() {
               />
               <div className="relative">
                 <span className="font-mono text-sm md:text-lg uppercase tracking-widest text-primary">// Impact Measurement</span>
-                <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">
+                <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-5xl font-bold tracking-tighter">
                   From Awareness <span className="text-gradient">to Shelf.</span>
                 </h2>
                 <p className="mt-5 sm:mt-6 text-sm sm:text-base text-muted-foreground leading-relaxed">
@@ -138,7 +138,7 @@ function AboutPage() {
         <section className="py-14 md:py-20 border-t border-border">
           <div className="mx-auto max-w-4xl px-5 sm:px-6 text-center">
             <span className="font-mono text-sm md:text-lg uppercase tracking-widest text-primary">// Vision</span>
-            <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter leading-[1.05] sm:leading-[0.95]">
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter leading-[1.05] sm:leading-[0.95]">
               Bridging Broadcast <br/>and <span className="text-gradient">Digital.</span>
             </h2>
             <p className="mt-5 sm:mt-6 mx-auto max-w-3xl text-base md:text-lg text-muted-foreground leading-relaxed">

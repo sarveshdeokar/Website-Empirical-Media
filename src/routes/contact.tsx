@@ -29,7 +29,7 @@ function ContactPage() {
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="relative mx-auto max-w-7xl px-5 sm:px-6">
             <span className="font-mono text-sm md:text-lg uppercase tracking-[0.2em] text-primary">// Contact</span>
-            <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-8xl font-bold tracking-tighter leading-[1.05] sm:leading-[0.95]">
+            <h1 className="mt-4 font-display text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter leading-[1.05] sm:leading-[0.95]">
               Strategy that scales.
               <br />
               <span className="text-gradient">Execution that delivers.</span>
@@ -181,7 +181,7 @@ function PortfolioDownload() {
           <div className="relative grid lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-10 items-center">
             <div>
               <span className="font-mono text-sm md:text-lg uppercase tracking-[0.2em] text-primary">// Portfolio</span>
-              <h2 className="mt-3 font-display text-2xl sm:text-3xl md:text-5xl font-bold tracking-tighter">
+              <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">
                 Download our work deck.
               </h2>
               <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground max-w-lg">

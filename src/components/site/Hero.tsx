@@ -26,7 +26,7 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 w-full">
 
-        <h1 className="font-sans text-[2rem] sm:text-[2.6rem] md:text-5xl lg:text-[4.55rem] font-bold leading-[1.05] sm:leading-[0.95] tracking-tighter">
+        <h1 className="font-sans text-[2.5rem] sm:text-[2.6rem] md:text-5xl lg:text-[4.55rem] font-bold leading-[1.05] sm:leading-[0.95] tracking-tighter">
           <span className="text-gradient">From TV Advertising</span>
           <br />
           to Total Marketing<br className="hidden sm:block" /> Intelligence
@@ -37,7 +37,7 @@ export default function Hero() {
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
               Empirical Media has spent over a decade building trust, transparency, and measurable impact in India's television advertising ecosystem. Today, we are redefining what a media agency can be — evolving into a Full-Funnel Marketing Intelligence Partner that unites Linear TV, Connected TV (CTV), Digital, and Commerce into one seamless performance framework.
             </p>
-            <p className="mt-2 font-display text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-gradient">
+            <p className="mt-2 font-display text-2xl sm:text-3xl md:text-3xl font-bold tracking-tight text-gradient">
               Empirical Media makes every impression count.
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function Hero() {
                   className="pl-4 basis-3/4 sm:basis-1/2 md:basis-1/3 lg:basis-1/3"
                 >
                   <div className="glass rounded-2xl p-6 sm:p-8 text-center h-full flex flex-col justify-center gap-2">
-                    <div className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gradient">
+                    <div className="font-display text-4xl sm:text-5xl md:text-5xl font-bold text-gradient">
                       {k}
                     </div>
                     <div className="text-xs sm:text-sm uppercase tracking-widest text-muted-foreground">
