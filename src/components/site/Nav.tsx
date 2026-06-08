@@ -31,10 +31,10 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <div className={`mx-auto max-w-7xl px-6 transition-all duration-300 ${scrolled ? "pt-2" : "pt-6"}`}>
-        <nav className="grid grid-cols-[auto_1fr_auto] items-center px-4 sm:px-6 py-3 gap-3">
-          <Link to="/" className="flex items-center shrink-0 py-2">
-            <img src={logo} alt="Empirical Media" className={`w-auto transition-all duration-300 ${scrolled ? "h-12 sm:h-14" : "h-14 sm:h-20"}`} />
+      <div className={`mx-auto max-w-7xl px-3 sm:px-6 transition-all duration-300 ${scrolled ? "pt-2" : "pt-3 sm:pt-6"}`}>
+        <nav className="grid grid-cols-[auto_1fr_auto] items-center px-2 sm:px-6 py-2 sm:py-3 gap-2 sm:gap-3">
+          <Link to="/" className="flex items-center shrink-0 py-1 sm:py-2">
+            <img src={logo} alt="Empirical Media" className={`w-auto transition-all duration-300 ${scrolled ? "h-9 sm:h-14" : "h-10 sm:h-20"}`} />
           </Link>
           <ul className="hidden lg:flex items-center justify-center gap-6 text-xl font-bold uppercase tracking-widest">
             {links.map((l) => (

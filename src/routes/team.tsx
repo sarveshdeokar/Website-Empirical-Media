@@ -58,16 +58,16 @@ function TeamPage() {
     <div className="min-h-screen">
       <Nav />
       <main>
-        <section className="relative pt-40 pb-16 noise">
+        <section className="relative pt-28 md:pt-40 pb-10 md:pb-16 noise">
           <div className="absolute inset-0 grid-bg opacity-50" />
-          <div className="relative mx-auto max-w-5xl px-6 text-center">
-            <span className="font-mono text-base md:text-lg uppercase tracking-[0.2em] text-primary">// Our Team</span>
-            <h1 className="mt-4 font-display text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95]">
+          <div className="relative mx-auto max-w-5xl px-5 sm:px-6 text-center">
+            <span className="font-mono text-sm md:text-lg uppercase tracking-[0.2em] text-primary">// Our Team</span>
+            <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-8xl font-bold tracking-tighter leading-[1] sm:leading-[0.95]">
               Driven by Data.
               <br />
               <span className="text-gradient">Defined by Expertise.</span>
             </h1>
-            <p className="mt-6 mx-auto max-w-2xl text-lg text-muted-foreground">
+            <p className="mt-6 mx-auto max-w-2xl text-base md:text-lg text-muted-foreground">
               Empirical Media is powered by a multidisciplinary team of strategists, media analysts, digital experts, and commerce planners. Our leadership brings over 20 years of experience in media planning, audit, and brand consulting across India's fastest-growing consumer categories. We believe in collaboration, innovation, and integrity — blending analytical precision with creative strategy to help brands grow smarter.
             </p>
 
@@ -75,8 +75,8 @@ function TeamPage() {
           </div>
         </section>
 
-        <section className="py-16">
-          <div className="mx-auto max-w-5xl px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-35">
+        <section className="py-10 md:py-16">
+          <div className="mx-auto max-w-5xl px-5 sm:px-6 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {team.map((m) => (
               <article
                 key={m.name}
