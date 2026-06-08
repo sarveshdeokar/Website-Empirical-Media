@@ -78,7 +78,7 @@ export default function Nav() {
                 <li key={l.to}>
                   <Link
                     to={l.to}
-                    className={`px-4 py-2 hover:text-primary transition-colors ${scrolled ? "text-foreground" : "text-white"}`}
+                    className={`px-4 py-2 hover:text-primary transition-colors ${scrolled ? "text-foreground" : "text-foreground dark:text-white"}`}
                     activeProps={{ className: "px-4 py-2 text-primary" }}
                     activeOptions={{ exact: l.to === "/" }}
                   >
