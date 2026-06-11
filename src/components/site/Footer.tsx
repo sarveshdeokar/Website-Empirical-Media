@@ -27,7 +27,7 @@ export default function Footer() {
             <h4 className="font-mono uppercase text-sm sm:text-lg tracking-widest text-muted-foreground">Reach us</h4>
             <ul className="mt-3 sm:mt-4 space-y-2 text-sm sm:text-lg break-words">
               <li><a href="mailto:sales@empiricalmedia.in" className="hover:text-primary">sales@empiricalmedia.in</a></li>
-              <li><a href="tel:+916366799955" className="hover:text-primary">+91 63667 99955</a></li>
+              <li><a href="tel:+919741333027" className="hover:text-primary">+91 97413 33027</a></li>
               <li><a href="https://www.linkedin.com/company/empiricalmediabangalore/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">LinkedIn ↗</a></li>
               <li className="text-muted-foreground">#367, 2nd Floor, 8th Main Road,<br/>11th Cross, 2nd Block, Jayanagar,<br/>Bengaluru, Karnataka 560011</li>
             </ul>
