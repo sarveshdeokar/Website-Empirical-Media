@@ -275,7 +275,7 @@ function PortfolioDownload() {
   );
 }
 
-function Field({ label, name, type = "text", placeholder }: { label: string; name: string; type?: string; placeholder?: string }) {
+function Field({ label, name, type = "text", placeholder, required, maxLength }: { label: string; name: string; type?: string; placeholder?: string; required?: boolean; maxLength?: number }) {
   return (
     <div>
       <label className="font-mono text-sm md:text-lg uppercase tracking-widest text-muted-foreground">{label}</label>
@@ -283,6 +283,8 @@ function Field({ label, name, type = "text", placeholder }: { label: string; nam
         name={name}
         type={type}
         placeholder={placeholder}
+        required={required}
+        maxLength={maxLength}
         className="mt-2 w-full rounded-xl bg-background border border-border p-3 sm:p-4 text-base outline-none focus:border-primary transition"
       />
     </div>
