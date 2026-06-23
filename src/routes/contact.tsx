@@ -18,9 +18,51 @@ export const Route = createFileRoute("/contact")({
 });
 
 const PORTFOLIO_ENDPOINT = "/api/portfolio";
+const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbwJlIHOiqh8qr0uX5oUuKP3DwntYxbrJjzcWaT2ktd6CoAU3Np281ir5no_CrendAN_/exec";
 
 function ContactPage() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (status === "sending") return;
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const payload = {
+      name: String(fd.get("name") || "").trim(),
+      company: String(fd.get("company") || "").trim(),
+      email: String(fd.get("email") || "").trim(),
+      phone: String(fd.get("phone") || "").trim(),
+      message: String(fd.get("message") || "").trim(),
+      sourcePage: typeof window !== "undefined" ? window.location.pathname : "",
+    };
+    if (!payload.name || !payload.email || !payload.message) {
+      setStatus("error");
+      setErrorMsg("Please fill in your name, email, and message.");
+      return;
+    }
+    if (payload.name.length > 100 || payload.email.length > 255 || payload.message.length > 2000) {
+      setStatus("error");
+      setErrorMsg("One of the fields is too long. Please shorten and try again.");
+      return;
+    }
+    setStatus("sending");
+    setErrorMsg("");
+    try {
+      await fetch(SHEETS_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+      });
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setStatus("error");
+      setErrorMsg("Couldn't send right now. Please email sales@empiricalmedia.in.");
+    }
+  };
   return (
     <div className="min-h-screen">
       <Nav />
