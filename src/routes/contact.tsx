@@ -4,6 +4,7 @@ import Footer from "@/components/site/Footer";
 import { useState } from "react";
 import { Mail, Phone, MapPin, ArrowUpRight, Calendar, Linkedin, Download, Lock } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -18,7 +19,8 @@ export const Route = createFileRoute("/contact")({
 });
 
 const PORTFOLIO_ENDPOINT = "/api/portfolio";
-const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbwJlIHOiqh8qr0uX5oUuKP3DwntYxbrJjzcWaT2ktd6CoAU3Np281ir5no_CrendAN_/exec";
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function ContactPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -29,36 +31,52 @@ function ContactPage() {
     if (status === "sending") return;
     const form = e.currentTarget;
     const fd = new FormData(form);
-    const payload = {
-      name: String(fd.get("name") || "").trim(),
-      company: String(fd.get("company") || "").trim(),
-      email: String(fd.get("email") || "").trim(),
-      phone: String(fd.get("phone") || "").trim(),
-      message: String(fd.get("message") || "").trim(),
-      sourcePage: typeof window !== "undefined" ? window.location.pathname : "",
-    };
-    if (!payload.name || !payload.email || !payload.message) {
+    const name = String(fd.get("name") || "").trim();
+    const company = String(fd.get("company") || "").trim();
+    const email = String(fd.get("email") || "").trim();
+    const phone = String(fd.get("phone") || "").trim();
+    const message = String(fd.get("message") || "").trim();
+
+    if (!name || !email || !message) {
       setStatus("error");
       setErrorMsg("Please fill in your name, email, and message.");
       return;
     }
-    if (payload.name.length > 100 || payload.email.length > 255 || payload.message.length > 2000) {
+    if (!EMAIL_RE.test(email)) {
+      setStatus("error");
+      setErrorMsg("Please enter a valid email address.");
+      return;
+    }
+    if (name.length > 100 || email.length > 255 || message.length > 2000 || company.length > 120 || phone.length > 30) {
       setStatus("error");
       setErrorMsg("One of the fields is too long. Please shorten and try again.");
       return;
     }
+
+    const params = typeof window !== "undefined" ? new URLSearchParams(window.location.search) : new URLSearchParams();
+
     setStatus("sending");
     setErrorMsg("");
     try {
-      await fetch(SHEETS_ENDPOINT, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify(payload),
+      const { error } = await supabase.from("contact_submissions").insert({
+        name,
+        company: company || null,
+        email,
+        phone: phone || null,
+        message,
+        source_page: typeof window !== "undefined" ? window.location.pathname : null,
+        referrer: typeof document !== "undefined" ? document.referrer || null : null,
+        utm_source: params.get("utm_source"),
+        utm_medium: params.get("utm_medium"),
+        utm_campaign: params.get("utm_campaign"),
+        utm_term: params.get("utm_term"),
+        utm_content: params.get("utm_content"),
       });
+      if (error) throw error;
       setStatus("sent");
       form.reset();
-    } catch {
+    } catch (err) {
+      console.error("contact submission failed", err);
       setStatus("error");
       setErrorMsg("Couldn't send right now. Please email sales@empiricalmedia.in.");
     }
