@@ -65,13 +65,10 @@ export default function Marquee() {
         <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-background to-transparent z-10" />
         <div className="flex gap-5 sm:gap-8 animate-marquee w-max items-center">
           {loop.map((c, i) => (
-            <a
+            <div
               key={c.name + i}
-              href={c.url}
-              target="_blank"
-              rel="noopener noreferrer"
               title={c.name}
-              aria-label={`Visit ${c.name}`}
+              aria-label={c.name}
               className="group h-24 w-40 sm:h-36 sm:w-60 flex items-center justify-center shrink-0 rounded-2xl bg-white border border-black/5 px-4 sm:px-6 py-3 sm:py-4 shadow-[0_2px_10px_-2px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 transition-all"
             >
               <img
@@ -80,7 +77,7 @@ export default function Marquee() {
                 loading="lazy"
                 className="max-h-16 sm:max-h-28 max-w-full object-contain opacity-95 group-hover:opacity-100 transition"
               />
-            </a>
+            </div>
           ))}
         </div>
       </div>
