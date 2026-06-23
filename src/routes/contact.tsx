@@ -106,29 +106,38 @@ function ContactPage() {
         <section className="py-10 md:py-16">
           <div className="mx-auto max-w-7xl px-5 sm:px-6 grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-10">
             <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              onSubmit={handleSubmit}
               className="glass rounded-3xl p-6 sm:p-8 md:p-12 space-y-5 sm:space-y-6"
             >
               <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
-                <Field label="Name" name="name" placeholder="Your full name" />
-                <Field label="Company" name="company" placeholder="Where you work" />
-                <Field label="Email" name="email" type="email" placeholder="you@brand.com" />
-                <Field label="Phone" name="phone" placeholder="+91 …" />
+                <Field label="Name" name="name" placeholder="Your full name" required maxLength={100} />
+                <Field label="Company" name="company" placeholder="Where you work" maxLength={120} />
+                <Field label="Email" name="email" type="email" placeholder="you@brand.com" required maxLength={255} />
+                <Field label="Phone" name="phone" placeholder="+91 …" maxLength={30} />
               </div>
               <div>
                 <label className="font-mono text-sm md:text-lg uppercase tracking-widest text-muted-foreground">What can we help with?</label>
                 <textarea
+                  name="message"
                   rows={5}
+                  required
+                  maxLength={2000}
                   placeholder="A line or two about your brand and what you're trying to move."
                   className="mt-2 w-full rounded-xl bg-background border border-border p-3 sm:p-4 text-base outline-none focus:border-primary transition"
                 />
               </div>
+              {status === "error" && errorMsg && (
+                <p className="text-sm text-destructive">{errorMsg}</p>
+              )}
+              {status === "sent" && (
+                <p className="text-sm text-primary">Thanks — we'll be in touch within a working day.</p>
+              )}
               <button
                 type="submit"
-                disabled={sent}
+                disabled={status === "sending" || status === "sent"}
                 className="group inline-flex items-center gap-3 rounded-2xl bg-primary text-primary-foreground px-5 sm:px-6 py-3.5 sm:py-4 text-sm sm:text-base font-medium hover:shadow-[var(--shadow-glow)] transition disabled:opacity-60"
               >
-                {sent ? "Thanks — we'll be in touch." : "Send message"}
+                {status === "sending" ? "Sending…" : status === "sent" ? "Sent" : "Send message"}
                 <ArrowUpRight className="group-hover:rotate-45 transition" size={18} />
               </button>
             </form>
